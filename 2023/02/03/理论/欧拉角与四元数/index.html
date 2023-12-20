@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>欧拉角与四元数 | huigang39 の 部落格</title><meta name="author" content="Huigang Wang"><meta name="copyright" content="Huigang Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="#数学 欧拉角与四元数 一、欧拉角 简介 简单来说，欧拉角就是物体绕坐标系的三个坐标轴（X,Y,ZX, Y, ZX,Y,Z）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：  图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。 在这里，坐标系可以是 世界坐标系（xyzxyzxyz），也可以是 刚体坐标系 （XYZXYZXYZ），它的旋转顺序也是任意的。 欧拉角可以分成两种">
+<meta property="og:type" content="article">
+<meta property="og:title" content="欧拉角与四元数">
+<meta property="og:url" content="https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/index.html">
+<meta property="og:site_name" content="huigang39 の 部落格">
+<meta property="og:description" content="#数学 欧拉角与四元数 一、欧拉角 简介 简单来说，欧拉角就是物体绕坐标系的三个坐标轴（X,Y,ZX, Y, ZX,Y,Z）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：  图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。 在这里，坐标系可以是 世界坐标系（xyzxyzxyz），也可以是 刚体坐标系 （XYZXYZXYZ），它的旋转顺序也是任意的。 欧拉角可以分成两种">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://t.mwm.moe/fj">
+<meta property="article:published_time" content="2023-02-03T12:54:00.000Z">
+<meta property="article:modified_time" content="2023-12-20T04:30:53.403Z">
+<meta property="article:author" content="Huigang Wang">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://t.mwm.moe/fj"><link rel="shortcut icon" href="https://raw.githubusercontent.com/huigang39/picbed/main/202304121052398.jpg"><link rel="canonical" href="https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"这篇文章已经有","messageNext":"天没有更新了，它可能已经不再适用于当前您的情况，请注意甄别。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '欧拉角与四元数',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-20 12:30:53'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304121052398.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">37</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://t.mwm.moe/fj')"><nav id="nav"><span id="blog-info"><a href="/" title="huigang39 の 部落格"><span class="site-name">huigang39 の 部落格</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">欧拉角与四元数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-03T12:54:00.000Z" title="发表于 2023-02-03 20:54:00">2023-02-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-20T04:30:53.403Z" title="更新于 2023-12-20 12:30:53">2023-12-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="欧拉角与四元数"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>#数学</p>
+<h1>欧拉角与四元数</h1>
+<h2 id="一、欧拉角">一、欧拉角</h2>
+<h3 id="简介">简介</h3>
+<p>简单来说，欧拉角就是物体绕坐标系的三个坐标轴（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo separator="true">,</mo><mi>Y</mi><mo separator="true">,</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X, Y, Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span>）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082213857.gif" alt="欧拉角"></p>
+<p>图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。</p>
+<p>在这里，坐标系可以是 <strong>世界坐标系</strong>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">xyz</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.04398em;">yz</span></span></span></span>），也可以是 <strong>刚体坐标系</strong> （<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mi>Y</mi><mi>Z</mi></mrow><annotation encoding="application/x-tex">XYZ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span>），它的旋转顺序也是任意的。</p>
+<p>欧拉角可以分成两种情况：</p>
+<ol>
+<li>静态：绕 <strong>世界坐标系</strong> （<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">xyz</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.04398em;">yz</span></span></span></span>）三个轴的旋转，由于 <em>物体旋转过程中坐标轴保持静止</em>，所以称为静态；</li>
+<li>动态：绕 <strong>刚体坐标系</strong> （<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mi>Y</mi><mi>Z</mi></mrow><annotation encoding="application/x-tex">XYZ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span>）三个轴的旋转，由于 <em>物体旋转过程中坐标轴随着物体做相同的转动</em>，所以称为动态。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082214325.png" alt="欧拉角"></p>
+<p>上图具体的旋转步骤为：</p>
+<ol>
+<li>绕 <strong>世界坐标系</strong> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> 轴，旋转 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> 度；</li>
+<li>绕 <strong>刚体坐标系</strong> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 轴，旋转 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span> 度；</li>
+<li>绕 <strong>刚体坐标系</strong> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span> 轴，旋转 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span> 度。</li>
+</ol>
+<p>欧拉角遵循的是 <strong>右手坐标系</strong>，即大拇指指向坐标轴正方向，四指旋转的方向即为转动的正方向，欧拉角包含三个自由量：Yaw（偏航角）、 Pitch （俯仰角）、Roll（翻滚角），相当于有三个独立变量（自由度）控制一架飞机进行如下旋转操作：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082214463.gif" alt="飞机旋转"></p>
+<blockquote>
+<p>如何区分 Roll、Pitch、Yaw？</p>
+<p>首先应先给定物体一个姿态，就是确定其前后、左右、上下，这样就能对应 Roll、Pitch、Yaw。结合建立在物体上的坐标系，就可以搞定了。</p>
+<ol>
+<li>
+<p>绕着 <strong>前后</strong> 轴（Front-to-Back Axis）旋转角度为 <strong>Roll</strong>；</p>
+</li>
+<li>
+<p>绕着 <strong>左右</strong> 轴（Side-to-Side Axis）旋转角度为 <strong>Pitch</strong>；</p>
+</li>
+<li>
+<p>绕着 <strong>竖直</strong> 轴（Vertical Axis）旋转角度为 <strong>Yaw</strong>。</p>
+</li>
+</ol>
+<p>Tips：</p>
+<ol>
+<li>在物体上可以随意建立坐标系，这就意味着坐标轴的方向也是可以随意设定，因此仅仅说绕着某个坐标轴旋转就是 Pitch 在另一个坐标系中可能就不适用。</li>
+<li>先确定坐标系，然后绕固定坐标轴的旋转确定 Roll、Pitch、Yaw 的方式在特定的场合或领域是非常方便的，比如在航空、航海等，尤其是对于刚刚接触新手来说，死记硬背就好了，在这个圈里混，规矩就是这。</li>
+<li>对于有些场合，比如医疗器械、游戏开发等，绕某个轴旋转方式确定 Roll、Pitch、Yaw 就会带来一些理解上的问题。</li>
+</ol>
+</blockquote>
+<p>上面动图旋转步骤为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>→</mo><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">z \rightarrow Y \rightarrow X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> ，按照顺序标记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mi>Y</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">zYX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> ，加上角度即为一个完整欧拉角：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>z</mi><mi>Y</mi><mi>X</mi><mo>−</mo><mo stretchy="false">(</mo><mi>ψ</mi><mo separator="true">,</mo><mi>θ</mi><mo separator="true">,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">zYX - (\psi, \theta, \phi)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="右手坐标系">右手坐标系</h3>
+<p>如上所述，欧拉角遵循的是 <strong>右手坐标系</strong>，那么与之相对的肯定有左手坐标系，左手坐标系与右手坐标系最大的区别就是，如果将这两个坐标系的两个轴方向对齐，那么另一个轴的方向必定相反，因为左手坐标系目前我还没有用过，所以这里只列出右手坐标系的判断规则。如下图所示：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304192212001.png" alt="右手坐标系"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082214816.png" alt="右手坐标系"></p>
+<h3 id="万向节死锁">万向节死锁</h3>
+<p>万向节死锁发生在欧拉角形式下，是由欧拉旋转定义本身造成的。</p>
+<p>当任何一个坐标轴旋转角度为 90 度时，就会有两个轴的旋转动作起到对总体旋转结果相同的效果，这就被称为“死锁”，动图如下所示：</p>
+<h4 id="1-翻滚">1. 翻滚</h4>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082215649.webp" alt="翻滚"></p>
+<h4 id="2-俯仰">2. 俯仰</h4>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082215947.gif" alt="俯仰"></p>
+<h4 id="3-偏航">3. 偏航</h4>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216066.webp" alt="偏航"></p>
+<h4 id="4-死锁">4. 死锁</h4>
+<p>现在看起来，这个陀螺仪一切正常，在船体发生任意方向摇晃都可以通过自身调节来应对。然而，真的是这样吗？</p>
+<p>假如，船体发生了剧烈的变化，此时船首仰起了 90 度，此时的陀螺仪调节状态如下图：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216007.webp" alt="死锁"></p>
+<p>现在，转子不平衡了，陀螺仪的三板斧不起作用了。它失去了自身的调节能力。那么这是为什么呢？</p>
+<p>之前陀螺仪之所以能通过自身调节，保持平衡，是因为存在可以相对旋转的连接头。在这种情况下，<em>已经不存在可以相对旋转的连接头了</em>。</p>
+<p>那么连接头呢？去了哪里？显然，它还是在那里，只不过是，<em>连接头可以旋转的相对方向不是现在需要的按着 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">+Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span> 轴方向</em>。从上图中，我们清楚地看到：</p>
+<ul>
+<li>红色连接头：可以给予一个相对俯仰的自由度。</li>
+<li>绿色连接头：可以给予一个相对偏航的自由度。</li>
+<li>蓝色连接头：可以给予一个相对偏航的自由度。</li>
+</ul>
+<p>没错，三个连接头，提供的自由度只对应了 <strong>俯仰</strong> 和 <strong>偏航</strong> 两个自由度，<strong>翻滚</strong> 自由度丢失了。这就是陀螺仪上的“万向节死锁”问题。</p>
+<p>总结来说，欧拉角的“万向节死锁”问题，是由于欧拉旋转定义本身造成的。这种围绕选旋转前固定轴的先 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span>、再 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>、再 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 的旋转操作，与其最终所预期的三个轴向可以旋转的结果并非一定是一对一的映射。某些情况下是多对一的映射，造成一些旋转自由度的缺失，也就是“死锁”。</p>
+<p>在编程中很难规避死锁，所以现在更多使用四元数形式进行姿态表示与旋转。</p>
+<h2 id="二、四元数">二、四元数</h2>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>q</mi><mo>=</mo><mi>w</mi><mo>+</mo><mi>x</mi><mi>i</mi><mo>+</mo><mi>y</mi><mi>j</mi><mo>+</mo><mi>z</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">q = w + xi + yj + zk
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7429em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span></p>
+<p><a target="_blank" rel="noopener" href="https://krasjet.github.io/quaternion/quaternion.pdf">quaternion.pdf (krasjet.github.io)</a></p>
+<p><a target="_blank" rel="noopener" href="https://quaternions.online/">Quaternions - Visualisation</a></p>
+<p><a target="_blank" rel="noopener" href="https://eater.net/quaternions/video/intro">Visualizing quaternions | 3blue1brown + Ben Eater</a></p>
+<h3 id="四元数转欧拉角">四元数转欧拉角</h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">[</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>ϕ</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>θ</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>ψ</mi></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mo>=</mo><mrow><mo fence="true">[</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mn>2</mn><mrow><mo fence="true">(</mo><msub><mi>q</mi><mn>0</mn></msub><msub><mi>q</mi><mn>1</mn></msub><mo>+</mo><msub><mi>q</mi><mn>2</mn></msub><msub><mi>q</mi><mn>3</mn></msub><mo fence="true">)</mo></mrow></mrow><mrow><mn>1</mn><mo>−</mo><mn>2</mn><mrow><mo fence="true">(</mo><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>q</mi><mn>2</mn><mn>2</mn></msubsup><mo fence="true">)</mo></mrow></mrow></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>arcsin</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mn>2</mn><mrow><mo fence="true">(</mo><msub><mi>q</mi><mn>0</mn></msub><msub><mi>q</mi><mn>2</mn></msub><mo>−</mo><msub><mi>q</mi><mn>3</mn></msub><msub><mi>q</mi><mn>1</mn></msub><mo fence="true">)</mo></mrow><mo fence="true">)</mo></mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mn>2</mn><mrow><mo fence="true">(</mo><msub><mi>q</mi><mn>0</mn></msub><msub><mi>q</mi><mn>3</mn></msub><mo>+</mo><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub><mo fence="true">)</mo></mrow></mrow><mrow><mn>1</mn><mo>−</mo><mn>2</mn><mrow><mo fence="true">(</mo><msubsup><mi>q</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>q</mi><mn>3</mn><mn>2</mn></msubsup><mo fence="true">)</mo></mrow></mrow></mfrac></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}{c}
+\phi \\
+\theta \\
+\psi
+\end{array}\right]=\left[\begin{array}{c}
+\arctan \frac{2\left(q_{0} q_{1}+q_{2} q_{3}\right)}{1-2\left(q_{1}^{2}+q_{2}^{2}\right)} \\
+\arcsin \left(2\left(q_{0} q_{2}-q_{3} q_{1}\right)\right) \\
+\arctan \frac{2\left(q_{0} q_{3}+q_{1} q_{2}\right)}{1-2\left(q_{2}^{2}+q_{3}^{2}\right)}
+\end{array}\right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.667em;height:3.600em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.667em' height='3.600em' viewBox='0 0 667 3600'><path d='M403 1759 V84 H666 V0 H319 V1759 v0 v1759 h347 v-84
+H403z M403 1759 V0 H319 V1759 v0 v1759 h84z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.667em;height:3.600em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.667em' height='3.600em' viewBox='0 0 667 3600'><path d='M347 1759 V0 H0 V84 H263 V1759 v0 v1759 H0 v84 H347z
+M347 1759 V0 H263 V1759 v0 v1759 h84z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:4.84em;vertical-align:-2.17em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.65em;"><span style="top:-4.65em;"><span class="pstrut" style="height:6.8em;"></span><span style="width:0.667em;height:4.800em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.667em' height='4.800em' viewBox='0 0 667 4800'><path d='M403 1759 V84 H666 V0 H319 V1759 v1200 v1759 h347 v-84
+H403z M403 1759 V0 H319 V1759 v1200 v1759 h84z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.67em;"><span style="top:-4.67em;"><span class="pstrut" style="height:3.01em;"></span><span class="mord"><span class="mop">arctan</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.4925em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mtight">2</span><span class="minner mtight"><span class="mopen sizing reset-size3 size6 mtight delimcenter" style="top:0.075em;"><span class="mtight">(</span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1885em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3115em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1885em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3115em;"><span></span></span></span></span></span></span><span class="mclose sizing reset-size3 size6 mtight delimcenter" style="top:0.075em;"><span class="mtight">)</span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="minner mtight"><span class="mopen mtight delimcenter" style="top:0em;"><span class="mtight">(</span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mclose mtight delimcenter" style="top:0em;"><span class="mtight">)</span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.81em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.02em;"><span class="pstrut" style="height:3.01em;"></span><span class="mord"><span class="mop">arcsin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord">2</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span><span style="top:-1.65em;"><span class="pstrut" style="height:3.01em;"></span><span class="mord"><span class="mop">arctan</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.4925em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mtight">2</span><span class="minner mtight"><span class="mopen sizing reset-size3 size6 mtight delimcenter" style="top:0.075em;"><span class="mtight">(</span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1885em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3115em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1885em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3115em;"><span></span></span></span></span></span></span><span class="mclose sizing reset-size3 size6 mtight delimcenter" style="top:0.075em;"><span class="mtight">)</span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="minner mtight"><span class="mopen mtight delimcenter" style="top:0em;"><span class="mtight">(</span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mclose mtight delimcenter" style="top:0em;"><span class="mtight">)</span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.81em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.17em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.65em;"><span style="top:-4.65em;"><span class="pstrut" style="height:6.8em;"></span><span style="width:0.667em;height:4.800em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.667em' height='4.800em' viewBox='0 0 667 4800'><path d='M347 1759 V0 H0 V84 H263 V1759 v1200 v1759 H0 v84 H347z
+M347 1759 V0 H263 V1759 v1200 v1759 h84z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://huigang39.github.io">Huigang Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/">https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://huigang39.github.io" target="_blank">huigang39 の 部落格</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><div class="post_share"><div class="social-share" data-image="https://t.mwm.moe/fj" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/01/%E5%85%B6%E4%BB%96/SI%20%E7%BB%84%20Arduino%20%E5%AE%9E%E6%93%8D%E6%8C%87%E5%8D%97/" title="SI 组 Arduino 实操指南"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SI 组 Arduino 实操指南</div></div></a></div><div class="next-post pull-right"><a href="/2023/02/03/%E7%90%86%E8%AE%BA/IMU%20%E7%AE%80%E4%BB%8B/" title="IMU 简介"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">IMU 简介</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/08/29/%E7%90%86%E8%AE%BA/FOC/Clark%20%E5%8F%98%E6%8D%A2%E4%B8%8E%20Park%20%E5%8F%98%E6%8D%A2/" title="Clark 变换与 Park 变换"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="title">Clark 变换与 Park 变换</div></div></a></div><div><a href="/2023/11/02/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Krylov%20%E5%AD%90%E7%A9%BA%E9%97%B4%E9%99%8D%E9%98%B6/" title="Krylov 子空间降阶"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-02</div><div class="title">Krylov 子空间降阶</div></div></a></div><div><a href="/2023/06/30/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2/" title="拉普拉斯变换"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-01</div><div class="title">拉普拉斯变换</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304121052398.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Huigang Wang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">37</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/huigang39"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/88637865" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://github.com/huigang39" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/huigang39@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">欧拉角与四元数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%AC%A7%E6%8B%89%E8%A7%92"><span class="toc-number">1.1.</span> <span class="toc-text">一、欧拉角</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E6%89%8B%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-number">1.1.2.</span> <span class="toc-text">右手坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E5%90%91%E8%8A%82%E6%AD%BB%E9%94%81"><span class="toc-number">1.1.3.</span> <span class="toc-text">万向节死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%BF%BB%E6%BB%9A"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1. 翻滚</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BF%AF%E4%BB%B0"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">2. 俯仰</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%81%8F%E8%88%AA"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3. 偏航</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%AD%BB%E9%94%81"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">4. 死锁</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9B%9B%E5%85%83%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">二、四元数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%BD%AC%E6%AC%A7%E6%8B%89%E8%A7%92"><span class="toc-number">1.2.1.</span> <span class="toc-text">四元数转欧拉角</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/" title="Github 食用指南"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github 食用指南"/></a><div class="content"><a class="title" href="/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/" title="Github 食用指南">Github 食用指南</a><time datetime="2023-12-18T14:07:00.000Z" title="发表于 2023-12-18 22:07:00">2023-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/14/%E7%90%86%E8%AE%BA/%E7%94%B5%E8%B7%AF%E7%94%B5%E5%AD%90/%E5%BC%80%E6%BC%8F%E8%BE%93%E5%87%BA%E4%B8%8E%E6%8E%A8%E6%8C%BD%E8%BE%93%E5%87%BA/" title="开漏输出与推挽输出"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开漏输出与推挽输出"/></a><div class="content"><a class="title" href="/2023/12/14/%E7%90%86%E8%AE%BA/%E7%94%B5%E8%B7%AF%E7%94%B5%E5%AD%90/%E5%BC%80%E6%BC%8F%E8%BE%93%E5%87%BA%E4%B8%8E%E6%8E%A8%E6%8C%BD%E8%BE%93%E5%87%BA/" title="开漏输出与推挽输出">开漏输出与推挽输出</a><time datetime="2023-12-14T02:58:00.000Z" title="发表于 2023-12-14 10:58:00">2023-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="控制理论基础"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="控制理论基础"/></a><div class="content"><a class="title" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="控制理论基础">控制理论基础</a><time datetime="2023-12-11T03:50:00.000Z" title="发表于 2023-12-11 11:50:00">2023-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E5%AF%B9%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/" title="对学习的思考"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对学习的思考"/></a><div class="content"><a class="title" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E5%AF%B9%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/" title="对学习的思考">对学习的思考</a><time datetime="2023-12-11T03:47:00.000Z" title="发表于 2023-12-11 11:47:00">2023-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/10/%E8%BD%AC%E8%BD%BD/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%8A%98%E8%85%BE%E8%BF%99%E4%BA%9B%E5%B0%8F%E4%BC%97%E6%8A%80%E6%9C%AF%EF%BC%9F/" title="为什么我折腾这些小众技术？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么我折腾这些小众技术？"/></a><div class="content"><a class="title" href="/2023/12/10/%E8%BD%AC%E8%BD%BD/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%8A%98%E8%85%BE%E8%BF%99%E4%BA%9B%E5%B0%8F%E4%BC%97%E6%8A%80%E6%9C%AF%EF%BC%9F/" title="为什么我折腾这些小众技术？">为什么我折腾这些小众技术？</a><time datetime="2023-12-10T14:05:00.000Z" title="发表于 2023-12-10 22:05:00">2023-12-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://t.mwm.moe/fj')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Huigang Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const disqus_config = function () {
+    this.page.url = 'https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/'
+    this.page.identifier = '/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/'
+    this.page.title = '欧拉角与四元数'
+  }
+
+  const disqusReset = () => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  btf.addGlobalFn('themeChange', disqusReset, 'disqus')
+
+  const loadDisqus = () =>{
+    if (window.DISQUS) disqusReset()
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if ('Valine' === 'Disqus' || !true) {
+    if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      GLOBAL_CONFIG_SITE.isPost && getCount()
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

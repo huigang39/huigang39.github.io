@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Github 食用指南 | huigang39 の 部落格</title><meta name="author" content="Huigang Wang"><meta name="copyright" content="Huigang Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Github 食用指南 序 要了解 Github，需要先了解什么是 Git，Github 和 Git 的区别又是什么？   Git：Git 是一种 VCS（Version Control System）即版本控制系统，Git 是一种分布式版本控制系统。相对的，肯定还有集中式版本控制系统，这种 VCS 的代表就是 SVN。在 2005 年，Linux 的创始人 Linus Torvalds 为了解决">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github 食用指南">
+<meta property="og:url" content="https://huigang39.github.io/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="huigang39 の 部落格">
+<meta property="og:description" content="Github 食用指南 序 要了解 Github，需要先了解什么是 Git，Github 和 Git 的区别又是什么？   Git：Git 是一种 VCS（Version Control System）即版本控制系统，Git 是一种分布式版本控制系统。相对的，肯定还有集中式版本控制系统，这种 VCS 的代表就是 SVN。在 2005 年，Linux 的创始人 Linus Torvalds 为了解决">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://t.mwm.moe/fj">
+<meta property="article:published_time" content="2023-12-18T14:07:00.000Z">
+<meta property="article:modified_time" content="2023-12-18T14:07:00.000Z">
+<meta property="article:author" content="Huigang Wang">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://t.mwm.moe/fj"><link rel="shortcut icon" href="https://raw.githubusercontent.com/huigang39/picbed/main/202304121052398.jpg"><link rel="canonical" href="https://huigang39.github.io/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"这篇文章已经有","messageNext":"天没有更新了，它可能已经不再适用于当前您的情况，请注意甄别。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Github 食用指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-18 22:07:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304121052398.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">37</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://t.mwm.moe/fj')"><nav id="nav"><span id="blog-info"><a href="/" title="huigang39 の 部落格"><span class="site-name">huigang39 の 部落格</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Github 食用指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-18T14:07:00.000Z" title="发表于 2023-12-18 22:07:00">2023-12-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-18T14:07:00.000Z" title="更新于 2023-12-18 22:07:00">2023-12-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Github 食用指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Github 食用指南</h1>
+<h2 id="序">序</h2>
+<p>要了解 Github，需要先了解什么是 Git，Github 和 Git 的区别又是什么？</p>
+<ol>
+<li>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Git</a>：Git 是一种 VCS（Version Control System）即<strong>版本控制系统</strong>，Git 是一种<strong>分布式版本控制系统</strong>。相对的，肯定还有集中式版本控制系统，这种 VCS 的代表就是 SVN。在 2005 年，Linux 的创始人 Linus Torvalds 为了解决 Linux 内核开发中的版本控制问题，花了一周时间从头开始编写了一个革命性的新系统，并将其命名为 Git。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/zh/get-started">Github</a>：Github 是一个基于 Git 的在线版本控制和协作平台，在 2008 年被创建，于十年之后的 2018 年被微软收购。GitHub 的目标是简化 Git 的使用和协作，使得开发者可以轻松地共享代码、跟踪问题和合并代码。GitHub 提供了一个 Web 界面，使得用户可以在浏览器中查看和管理 Git 仓库。此外，GitHub 还提供了一些额外的功能，如代码审查、项目管理工具、社区功能等。</p>
+</li>
+</ol>
+<h2 id="初窥-Github">初窥 Github</h2>
+<p>在浏览和创建开源项目之前，我们最好先要有一个 Github 账号，当然了，Github 并不会像国内网站那样不登陆就完全无法使用，即使是游客，也可以浏览和下载开源项目（不过无法参与协作）。注册账号的过程并不复杂，由于我们是个人使用所以只需要注册个人账户即可，进入<a href="github.com">官网</a>，按照提示进行注册即可。</p>
+<blockquote>
+<p>Tips：在国外网站中，一般 <strong>Sign up</strong> 代表注册账号，<strong>Sign in</strong> 代表登陆已有账号。</p>
+</blockquote>
+<p>登陆账号后我们就进入了 Github 主页面（Dashboard），如果是新账号，可能是一片空白，因为你还没有什么内容可以展示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231218175003.png" alt="Dashboard"></p>
+<p>在 GitHub 上，有一些基本的概念需要了解：</p>
+<ol>
+<li>
+<p>仓库（Repository）：仓库是 GitHub 用来存储项目代码的地方。一个仓库包含所有的项目文件，包括代码、文档、资源等，以及每个文件的修订历史。</p>
+</li>
+<li>
+<p>分支（Branch）：在 GitHub 中，开发者可以在主分支（通常是 master 或 main）之外创建其他分支进行开发。这样可以在不影响主分支的情况下进行开发和测试。</p>
+</li>
+<li>
+<p>提交（Commit）：提交是在 GitHub 上保存更改的方式。每次提交都会在当前分支上创建一个新的版本，记录下所有文件的当前状态。</p>
+</li>
+<li>
+<p>推送（Push）：推送是将本地代码更改上传到 GitHub 仓库的过程。开发者可以使用命令行或者 Git 客户端工具将本地代码推送到远程仓库，使得其他人可以访问和使用这些更改。</p>
+</li>
+<li>
+<p>拉取请求（Pull Request）：当开发者在分支上完成开发并准备将更改合并到主分支时，他们可以创建一个拉取请求。这是一种通知项目维护者的方式，让他们知道你已经准备好将更改合并到主分支。</p>
+</li>
+<li>
+<p>合并（Merge）：当拉取请求被接受后，更改会被合并到主分支。这是将分支上的更改应用到主分支的过程。</p>
+</li>
+<li>
+<p>克隆（Clone）：克隆是将 GitHub 上的仓库复制到本地计算机的过程。这样开发者就可以在本地进行开发和测试，然后将更改推送（Push）回 GitHub。</p>
+</li>
+<li>
+<p>Fork：Fork 是在 GitHub 上复制别人的仓库到你的 GitHub 账户下的过程。这样你就可以在这个副本上自由地进行更改，而不会影响原始仓库。</p>
+</li>
+<li>
+<p>Star：如果你喜欢某个项目，你可以给它 “Star”。这是一种表达喜爱和支持的方式，同时也可以帮助你追踪你喜欢的项目。</p>
+</li>
+<li>
+<p>Issue：如果你在项目中发现了问题，或者有新的想法，你可以创建一个 Issue。这是一种与项目维护者和其他用户讨论的方式。</p>
+</li>
+<li>
+<p>GitHub Actions：GitHub Actions 是 GitHub 的持续集成/持续部署（CI/CD）工具，可以自动化软件工作流程。</p>
+</li>
+</ol>
+<p>现在对这些概念不熟悉没关系，后面我们会经常碰到这些概念，慢慢就能理解了。</p>
+<p>需要注意的是，我们在了解的时候，不能只记住概念的中文词条，也要把英文词条记住，因为在你使用 Github 的时候，并不会看到中文概念词条，所以需要我们做到将英文词条直接和概念本身对应起来。在很多时候，你可能会听到开发人员说诸如：“把这个 commit push 一下”、“切一下 branch”、“提一个 PR”这种中英文混合的语句，这并不是装逼，而是很多时候用英文本身更加贴近概念本身，因为这些概念本身就是从英文世界中出来的，像这种基础概念可能还好一些，有与之对应的中文词条。而很多时候甚至都没有合适的中文词条来对应原有的概念，这就非常麻烦，所以我一直主张尽量用原本的英文词条，除非某个概念的中文词条已经深入人心，例如：“使能”。即便如此，在学习的过程中还是要尽量知道中文词条对应的英文词条是什么，这样会在后续的外网资料或者英文文档中的查阅学习更加容易一些。</p>
+<h2 id="从实践开始">从实践开始</h2>
+<p>首先，我们创建一个 Repo，也就是仓库，一般我们所谓的项目都是以 Repo 的形式存放于 Github 中的。在 Github 主页面的右上角我们可以看到一个加号，点击它之后就能看到 New repository，点击这个就进入新建仓库的页面了。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231218143611.png" alt="新建仓库"></p>
+<p>然后填入信息即可，必填信息只有 Repository name（仓库名），其他信息选填即可。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231218145210.png" alt="仓库信息"></p>
+<blockquote>
+<p>Tips：默认新建的仓库为 Public 公有仓库，即公开访问权限，可以手动改为 Private 私有仓库，不公开仓库访问权限，也就是说 Private 仓库只有自己或者本组织的用户才能访问。</p>
+</blockquote>
+<p>剩下信息可以选填，比如 .gitignore 是 Git 的配置文件，它告诉 Git 哪些文件或目录不应该被添加到 Git 仓库中。license 是开源许可证，它定义了其他人如何使用、分发、修改或贡献你的项目。在 GitHub 中创建新的仓库时，你可以选择为你的项目添加一个开源许可证。</p>
+<p>如果你对这些不熟悉的话，可以选择不填写。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231218173607.png" alt="其他信息"></p>
+<p>新建仓库完成之后，我们可以看到有很多的提示命令。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220102817.png" alt="仓库信息"></p>
+<p>我们先来关注最重要的部分，也就是这个 <strong>HTTPS</strong> 和 <strong>SSH</strong>，在这里先不看 SSH，因为使用它作为仓库链接还需要配置 SSH 密钥对才能连接，这个我们后面再配置。</p>
+<blockquote>
+<p>Tips：</p>
+<p>HTTPS 和 SSH 是两种不同的协议，用于在你的本地机器和 GitHub 服务器之间传输数据。</p>
+<ol>
+<li>
+<p>HTTPS（Hyper Text Transfer Protocol Secure）是一种安全的 HTTP，它在 HTTP 和 TCP 之间添加了一个安全层（SSL 或 TLS）。这意味着所有传输的数据都会被加密，从而防止被第三方窃取。在 GitHub 中，当你使用 HTTPS 克隆仓库时，你需要每次推送时都输入你的 GitHub 用户名和密码（或使用凭据助手存储它们）。</p>
+</li>
+<li>
+<p>SSH（Secure Shell）是一种网络协议，用于安全地在不安全的网络上执行网络服务，如远程登录或远程命令执行。在 GitHub 中，当你使用 SSH 克隆仓库时，你需要创建一个 SSH 密钥对，并将公钥添加到你的 GitHub 账户。这样，你就可以在推送时使用你的私钥进行身份验证，而无需输入用户名和密码。</p>
+</li>
+</ol>
+<p>在 GitHub 中，你可以选择使用 HTTPS 或 SSH 克隆仓库，这取决于你的具体需求和偏好。</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220103053.png" alt="仓库链接"></p>
+<p>在本地电脑创建一个文件夹，最好和你的仓库同名，当然不同名也可以。然后在该文件路径下打开 Terminal 终端执行 <code>git init</code> 即可初始化该文件夹为 Git 仓库。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220110046.png" alt="初始化仓库"></p>
+<p>如果你细心的话就会发现这个文件夹下多了个名为 <code>.git</code> 的隐藏文件夹，这里面存放的就是 Git 仓库的各种信息，没有 <code>.git</code> 下的各种文件，那这个文件夹就不能称之为 Git 仓库。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220110502.png" alt=".git"></p>
+<p>接着我们来新建一个文件，一般来说每个仓库都会有一个名为 <code>README.md</code> 的 Markdown 格式的文件。这个文件主要描述了这个项目的用途、如何配置使用以及其他信息，是使用者需要阅读的第一手文档。</p>
+<p>这里我用命令向 <code>README.md</code> 文件中写入了 <code># demo</code> 的文字内容。这是一种 Markdown 格式，不熟悉的读者可以自行查阅学习相关语法。当然你不使用 Markdown 语法，单纯的使用 TXT 文本也是可以的，只不过在程序员群体中，Markdown 具有很高的通用性。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220111103.png" alt="README"></p>
+<p>注意了，接下来要展示的是 Git 最最最常用的三个命令，也就是 <code>add</code>、<code>commit</code> 和 <code>push</code>，掌握这三个命令的使用，基本可以应对个人开发（注意是个人开发，不涉及到团队开发）的大部分日常需求了。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220112947.png" alt="提交推送"></p>
+<p>可能有人会问：“你这不是还有 <code>git branch</code> 和 <code>git remote</code> 命令吗？”，不用担心这些命令基本只有第一次提交到远程仓库或者更换分支和更换远程仓库链接时才会用到，而且后续我们用 VSCode 初始化和提交仓库时就更方便了，几乎不需要使用命令。</p>
+<p>提交完之后再去浏览器刷新看一下，就能看到我们提交的文件了，因为 Github 会在每个文件夹的首页默认显示 <code>README</code> 文件，所以我们就能直接看到 <code>README.md</code> 的内容而无需点击进去。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/20231220113731.png" alt="远程仓库"></p>
+<p>后续再添加、提交和推送文件就还是老三样就行了：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add &#123;你要提交的文件&#125;          # git add . 可以提交所有修改过的文件（注意 add 后面是个英文句点）</span><br><span class="line">git commit -m &quot;你要写的提交信息&quot;  # 必须要写提交信息，即使你没什么可写的，否则无法提交（当然可以使用特殊方法跳过，但是没那个必要）</span><br><span class="line">git push                          # 第一次使用 -u 指定上游的远程分支之后，后续不修改分支的情况下无需加额外参数指定</span><br></pre></td></tr></table></figure>
+<p>至此，基础的 Git 命令行使用就基本学习完毕了。我们要学习的不只是 Git 的命令行使用，还有它的设计思想，比如 push 之前会有一个 commit 的行为，这是一般我们使用其他软件时很少见到的，用命令行能够更加清晰的展示这些设计思想。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://huigang39.github.io">Huigang Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://huigang39.github.io/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/">https://huigang39.github.io/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://huigang39.github.io" target="_blank">huigang39 の 部落格</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a></div><div class="post_share"><div class="social-share" data-image="https://t.mwm.moe/fj" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/12/14/%E7%90%86%E8%AE%BA/%E7%94%B5%E8%B7%AF%E7%94%B5%E5%AD%90/%E5%BC%80%E6%BC%8F%E8%BE%93%E5%87%BA%E4%B8%8E%E6%8E%A8%E6%8C%BD%E8%BE%93%E5%87%BA/" title="开漏输出与推挽输出"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">开漏输出与推挽输出</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="PlantUML 入门指南"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-01</div><div class="title">PlantUML 入门指南</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><span id="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304121052398.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Huigang Wang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">37</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/huigang39"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/88637865" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://github.com/huigang39" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/huigang39@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Github 食用指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E7%AA%A5-Github"><span class="toc-number">1.2.</span> <span class="toc-text">初窥 Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%AE%9E%E8%B7%B5%E5%BC%80%E5%A7%8B"><span class="toc-number">1.3.</span> <span class="toc-text">从实践开始</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/" title="Github 食用指南"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github 食用指南"/></a><div class="content"><a class="title" href="/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/" title="Github 食用指南">Github 食用指南</a><time datetime="2023-12-18T14:07:00.000Z" title="发表于 2023-12-18 22:07:00">2023-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/14/%E7%90%86%E8%AE%BA/%E7%94%B5%E8%B7%AF%E7%94%B5%E5%AD%90/%E5%BC%80%E6%BC%8F%E8%BE%93%E5%87%BA%E4%B8%8E%E6%8E%A8%E6%8C%BD%E8%BE%93%E5%87%BA/" title="开漏输出与推挽输出"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开漏输出与推挽输出"/></a><div class="content"><a class="title" href="/2023/12/14/%E7%90%86%E8%AE%BA/%E7%94%B5%E8%B7%AF%E7%94%B5%E5%AD%90/%E5%BC%80%E6%BC%8F%E8%BE%93%E5%87%BA%E4%B8%8E%E6%8E%A8%E6%8C%BD%E8%BE%93%E5%87%BA/" title="开漏输出与推挽输出">开漏输出与推挽输出</a><time datetime="2023-12-14T02:58:00.000Z" title="发表于 2023-12-14 10:58:00">2023-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="控制理论基础"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="控制理论基础"/></a><div class="content"><a class="title" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="控制理论基础">控制理论基础</a><time datetime="2023-12-11T03:50:00.000Z" title="发表于 2023-12-11 11:50:00">2023-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E5%AF%B9%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/" title="对学习的思考"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对学习的思考"/></a><div class="content"><a class="title" href="/2023/12/11/%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/%E5%AF%B9%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/" title="对学习的思考">对学习的思考</a><time datetime="2023-12-11T03:47:00.000Z" title="发表于 2023-12-11 11:47:00">2023-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/10/%E8%BD%AC%E8%BD%BD/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%8A%98%E8%85%BE%E8%BF%99%E4%BA%9B%E5%B0%8F%E4%BC%97%E6%8A%80%E6%9C%AF%EF%BC%9F/" title="为什么我折腾这些小众技术？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么我折腾这些小众技术？"/></a><div class="content"><a class="title" href="/2023/12/10/%E8%BD%AC%E8%BD%BD/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%8A%98%E8%85%BE%E8%BF%99%E4%BA%9B%E5%B0%8F%E4%BC%97%E6%8A%80%E6%9C%AF%EF%BC%9F/" title="为什么我折腾这些小众技术？">为什么我折腾这些小众技术？</a><time datetime="2023-12-10T14:05:00.000Z" title="发表于 2023-12-10 22:05:00">2023-12-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://t.mwm.moe/fj')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Huigang Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><script>(() => {
+  const disqus_config = function () {
+    this.page.url = 'https://huigang39.github.io/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/'
+    this.page.identifier = '/2023/12/18/%E6%8A%80%E6%9C%AF/Github%20%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/'
+    this.page.title = 'Github 食用指南'
+  }
+
+  const disqusReset = () => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  btf.addGlobalFn('themeChange', disqusReset, 'disqus')
+
+  const loadDisqus = () =>{
+    if (window.DISQUS) disqusReset()
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if ('Valine' === 'Disqus' || !true) {
+    if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      GLOBAL_CONFIG_SITE.isPost && getCount()
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
