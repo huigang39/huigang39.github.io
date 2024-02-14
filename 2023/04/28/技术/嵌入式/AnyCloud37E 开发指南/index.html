@@ -19,16 +19,16 @@
   <title>AnyCloud37E 开发指南 - huigang39's blog</title>
 
   
-    <meta name="description" content="AnyCloud 37 E 开发指南一、准备物品清单：  开发板（屏幕、摄像头、SDIO WIFI 小板）× 1； UART 转 Type A 数据线 × 1； Micro-B 转 Type A 数据线 × 2；  二、启动 找到带有“DC 电源座”字样的 USB 插口，插入 Micro-B 数据线，另一端插入电脑或者电源； 找到 SW 1 电源开关按钮，按下按钮即供电开机；  三、配置在配置交叉">
+    <meta name="description" content="AnyCloud 37 E 开发指南 一、准备 物品清单：  开发板（屏幕、摄像头、SDIO WIFI 小板）× 1； UART 转 Type A 数据线 × 1； Micro-B 转 Type A 数据线 × 2；  二、启动  找到带有“DC 电源座”字样的 USB 插口，插入 Micro-B 数据线，另一端插入电脑或者电源； 找到 SW 1 电源开关按钮，按下按钮即供电开机；  三、配置 在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AnyCloud37E 开发指南">
 <meta property="og:url" content="https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="huigang39&#39;s blog">
-<meta property="og:description" content="AnyCloud 37 E 开发指南一、准备物品清单：  开发板（屏幕、摄像头、SDIO WIFI 小板）× 1； UART 转 Type A 数据线 × 1； Micro-B 转 Type A 数据线 × 2；  二、启动 找到带有“DC 电源座”字样的 USB 插口，插入 Micro-B 数据线，另一端插入电脑或者电源； 找到 SW 1 电源开关按钮，按下按钮即供电开机；  三、配置在配置交叉">
+<meta property="og:description" content="AnyCloud 37 E 开发指南 一、准备 物品清单：  开发板（屏幕、摄像头、SDIO WIFI 小板）× 1； UART 转 Type A 数据线 × 1； Micro-B 转 Type A 数据线 × 2；  二、启动  找到带有“DC 电源座”字样的 USB 插口，插入 Micro-B 数据线，另一端插入电脑或者电源； 找到 SW 1 电源开关按钮，按下按钮即供电开机；  三、配置 在">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/huigang39/picbed/main/202304111750392.png">
 <meta property="article:published_time" content="2023-04-28T12:31:00.000Z">
-<meta property="article:modified_time" content="2024-02-14T12:34:35.881Z">
+<meta property="article:modified_time" content="2024-02-14T12:41:31.031Z">
 <meta property="article:author" content="Huigang Wang">
 <meta property="article:tag" content="嵌入式">
 <meta property="article:tag" content="Linux">
@@ -74,7 +74,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title active" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title active" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -88,7 +88,7 @@
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-04-28T12:31:00.000Z">2023-04-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T12:34:35.881Z">2024-02-14</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-04-28T12:31:00.000Z">2023-04-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T12:41:31.031Z">2024-02-14</time></span></div></div>
 </div>
 
     
@@ -99,17 +99,21 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="AnyCloud-37-E-开发指南"><a href="#AnyCloud-37-E-开发指南" class="headerlink" title="AnyCloud 37 E 开发指南"></a>AnyCloud 37 E 开发指南</h2><h3 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h3><p>物品清单：</p>
+  </div><article class="md-text content"><h2 id="AnyCloud-37-E-开发指南">AnyCloud 37 E 开发指南</h2>
+<h3 id="一、准备">一、准备</h3>
+<p>物品清单：</p>
 <ol>
 <li>开发板（屏幕、摄像头、SDIO WIFI 小板）× 1；</li>
 <li>UART 转 Type A 数据线 × 1；</li>
 <li>Micro-B 转 Type A 数据线 × 2；</li>
 </ol>
-<h3 id="二、启动"><a href="#二、启动" class="headerlink" title="二、启动"></a>二、启动</h3><ol>
+<h3 id="二、启动">二、启动</h3>
+<ol>
 <li>找到带有“DC 电源座”字样的 USB 插口，插入 Micro-B 数据线，另一端插入电脑或者电源；</li>
 <li>找到 SW 1 电源开关按钮，按下按钮即供电开机；</li>
 </ol>
-<h3 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h3><p>在配置交叉编译环境之前，需要先在电脑上装一个 Ubuntu 系统，这里提供两种思路：</p>
+<h3 id="三、配置">三、配置</h3>
+<p>在配置交叉编译环境之前，需要先在电脑上装一个 Ubuntu 系统，这里提供两种思路：</p>
 <ol>
 <li>VMware 虚拟机或者 VirtualBox 虚拟机</li>
 <li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/install">Windows Subsystem For Linux（WSL）</a></li>
@@ -117,43 +121,51 @@
 <p>具体的安装方法可以自己去查阅。</p>
 <p>系统安装完成之后，需要安装编译环境，具体安装命令有：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gcc-multilib</span><br><span class="line">sudo apt-get install libstdc++6</span><br><span class="line">sudo apt-get install make cmake</span><br><span class="line">sudo apt-get install zlib1g-dev lib32z1-dev</span><br><span class="line">sudo apt-get install liblzo2-dev liblzo2-2 liblzo2-dev:i386</span><br><span class="line">sudo apt-get install u-boot-tools</span><br><span class="line">sudo apt-get install lib32ncurses6 libncurses5-dev</span><br><span class="line">sudo apt-get install libmpfr-dev libmpfr6 libmpfr6:i386</span><br><span class="line">sudo apt-get install mtd-utils</span><br><span class="line">sudo apt-get install libtool</span><br><span class="line">sudo apt-get install cpp g++</span><br><span class="line">sudo apt-get install gawk</span><br><span class="line">sudo apt-get install gcc perl</span><br></pre></td></tr></table></figure>
-
 <p>如果安装之后还有报错缺少什么东西，根据报错的内容去安装对应的包即可。</p>
 <p>在编译之前，我们还需要将交叉编译器添加到环境变量中，理论上，交叉编译器应当位于 SDK 的 <code>tool</code> 文件夹下的 <code>arm-anykav500-linux-uclibcgnueabi</code> 压缩包内，只需要执行 <code>tar xvf arm-anykav500-linux-uclibcgnueabi.tar.bz2</code> 解压压缩包，里面的 <code>bin</code> 目录就是交叉编译器的所在目录了，将该 <code>bin</code> 目录的绝对路径添加到环境变量即可。如果想就只使用一次，可以执行 <code>export PATH=$PATH:这里改为你的交叉编译器路径</code> 以设置临时变量，如果想设置永久变量，可以前面的命令放到 <code>~/.bashrc</code> 文件的最后一行，这样每次打开一个 Shell 都会设置一遍环境变量。</p>
-<h3 id="四、编译"><a href="#四、编译" class="headerlink" title="四、编译"></a>四、编译</h3><p>解压官方给的压缩包文件（或者去我的 <a target="_blank" rel="noopener" href="https://github.com/huigang39/AnykaPDK">Github 仓库</a>下载），找到 <code>AK37E_SDK_V1.05.tar.gz</code> 文件，使用 <code>tar xvf AK37E_SDK_V1.05.tar.gz</code> 命令来解压 SDK，解压完成之后，找到 <code>auto_build.sh</code> 文件，运行该文件即可成功编译。</p>
+<h3 id="四、编译">四、编译</h3>
+<p>解压官方给的压缩包文件（或者去我的 <a target="_blank" rel="noopener" href="https://github.com/huigang39/AnykaPDK">Github 仓库</a>下载），找到 <code>AK37E_SDK_V1.05.tar.gz</code> 文件，使用 <code>tar xvf AK37E_SDK_V1.05.tar.gz</code> 命令来解压 SDK，解压完成之后，找到 <code>auto_build.sh</code> 文件，运行该文件即可成功编译。</p>
 <p>需要注意的是，使用 <code>auto_build.sh</code> 脚本自动化编译可能会导致难以看出是哪一部分出现了报错，所以如果编译脚本很快就执行结束了，</p>
 <blockquote>
 <p>可能会出现 <code>error while loading shared libraries:libmpfr.so.4: cannot open shared object file: No such file or directory.</code> 一个链接库无法链接的问题，运行 <code>sudo ln -s /usr/lib/x86_64-linux-gnu/libmpfr.so.6 /usr/lib/x86_64-linux-gnu/libmpfr.so.4</code> 命令即可。</p>
 </blockquote>
-<h3 id="五、烧录"><a href="#五、烧录" class="headerlink" title="五、烧录"></a>五、烧录</h3><ol>
+<h3 id="五、烧录">五、烧录</h3>
+<ol>
 <li>在烧录之前，确保开发板上的 JP 1 和 JP 2 跳线已配置为 USB_DP -&gt; AK_DP，USB_DM -&gt;AK_DM；</li>
 <li>在电脑上（Windows 系统）运行 Burn Tool 工具，暂不需要改动配置；</li>
 <li>用数据线插上开发板上带有“串口”字样的 Micro-B 接口，另一头插入电脑；</li>
 <li>打开 Burn Tool 烧录软件，按下开发板的 BOOT 按钮，<strong>不要松手</strong>，然后短按 RESET 按钮一次，等待 Burn Tool 软件设备 0 通道变黄，然后点击开始，便可开始烧录；</li>
 </ol>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304111750392.png" alt="burn tool"></p>
-<h3 id="六、调试"><a href="#六、调试" class="headerlink" title="六、调试"></a>六、调试</h3><ol>
+<h3 id="六、调试">六、调试</h3>
+<ol>
 <li>在供电的同时，使用 USB 转 UART 数据线连接电脑与开发板，启动 <a target="_blank" rel="noopener" href="https://mobaxterm.mobatek.net/">MobaXterm</a>，找到对应的串口号，选择 Shell 进行连接；</li>
-<li>按下开发板的 RESET 按键，要求输入用户名和密码：<ul>
+<li>按下开发板的 RESET 按键，要求输入用户名和密码：
+<ul>
 <li>用户名：root</li>
 <li>密码为空，回车即可</li>
 </ul>
 </li>
 <li>操作过程会一直弹出 <code>udhcpc:</code>，这是应为没有网络连接导致，可通过 <code>killall udhcpc</code> 命令来终止这个进程；</li>
 </ol>
-<h3 id="七、LCD-开发"><a href="#七、LCD-开发" class="headerlink" title="七、LCD 开发"></a>七、LCD 开发</h3><h4 id="1-视频（图像）文件转换"><a href="#1-视频（图像）文件转换" class="headerlink" title="1. 视频（图像）文件转换"></a>1. 视频（图像）文件转换</h4><p>由于该开发板 LCD 屏幕不能直接显示 JPG、PNG 或 MP 4 等常见文件，我们需要借助工具来将这些文件转化为该 LCD 支持的 RGB 或 YUV 等格式（具体内容请见《中间件接口说明》文档“视频输出”部分）。</p>
+<h3 id="七、LCD-开发">七、LCD 开发</h3>
+<h4 id="1-视频（图像）文件转换">1. 视频（图像）文件转换</h4>
+<p>由于该开发板 LCD 屏幕不能直接显示 JPG、PNG 或 MP 4 等常见文件，我们需要借助工具来将这些文件转化为该 LCD 支持的 RGB 或 YUV 等格式（具体内容请见《中间件接口说明》文档“视频输出”部分）。</p>
 <p>在本文中我们将借助 FFmpeg 工具来执行格式转换工作：</p>
 <ul>
 <li>Windows：在 Microsoft Store 中直接下载即可；</li>
 <li>Linux：各大 Linux 发行版基本都可以直接通过包管理器安装 FFmpeg，例如 Debian 系的 Ubuntu 可以使用 <code>sudo apt install ffmpeg</code> 进行安装，Arch 系可以使用 <code>sudo pacman -S ffmpeg</code> 进行安装。</li>
 </ul>
 <p>安装完成之后，就可以在命令行中使用 FFmpeg 了（该软件没有 GUI 图形界面）。</p>
-<p>&#x2F;&#x2F; todo<br>首先我们创建一个名为 image 的文件夹和一个 yuv 文件夹（其实随便什么名字都可以），然后使用 <code>ffmpeg -i input.mp4 -r 10 -f image2 yuv/%05d.yuv</code> 命令将 input. Mp 4 分解成一帧一帧的 yuv 文件且保存在 yuv 文件夹下。</p>
+<p>// todo<br>
+首先我们创建一个名为 image 的文件夹和一个 yuv 文件夹（其实随便什么名字都可以），然后使用 <code>ffmpeg -i input.mp4 -r 10 -f image2 yuv/%05d.yuv</code> 命令将 input. Mp 4 分解成一帧一帧的 yuv 文件且保存在 yuv 文件夹下。</p>
 <p>通过以上操作，我们得到了一个名为 yuv 的文件夹，且该文件夹内容为 input. Mp 4 视频的逐帧 yuv 文件。</p>
-<h4 id="2-挂载-TF-卡"><a href="#2-挂载-TF-卡" class="headerlink" title="2. 挂载 TF 卡"></a>2. 挂载 TF 卡</h4><p>因为开发板的存储空间非常小且是只读的，所以我们无法通过烧录的形式将上述的 yuv 文件夹导入开发板内部存储器中，因此我们需要借助 TF 卡这一外部存储器。</p>
+<h4 id="2-挂载-TF-卡">2. 挂载 TF 卡</h4>
+<p>因为开发板的存储空间非常小且是只读的，所以我们无法通过烧录的形式将上述的 yuv 文件夹导入开发板内部存储器中，因此我们需要借助 TF 卡这一外部存储器。</p>
 <p>首先我们将 TF 卡插入读卡器然后接入到 PC 中，将 yuv 文件夹复制到 TF 卡内，然后将 TF 卡插到开发板上即可。</p>
 <p>开发板启动之后，登录进入系统，运行 <code>tf_card.sh</code> 来加载相关驱动，然后查看 <code>/dev</code> 目录下有无 <code>mmcblk0p1</code> 文件，如果有就算是识别出来 TF 卡了，紧接着执行 <code>mount /dev/mmcblk0p1 /mnt</code> 将 TF 卡挂载到 <code>/mnt</code> 目录下，这样我们就能在 <code>/mnt</code> 目录下读写 TF 卡内的文件了。</p>
-<h4 id="3-显示图像"><a href="#3-显示图像" class="headerlink" title="3. 显示图像"></a>3. 显示图像</h4><p>在让屏幕显示图像之前，我们还需要加载屏幕相关驱动，具体步骤为：</p>
+<h4 id="3-显示图像">3. 显示图像</h4>
+<p>在让屏幕显示图像之前，我们还需要加载屏幕相关驱动，具体步骤为：</p>
 <ol>
 <li>进入 <code>/usr/modules</code> 目录内；</li>
 <li>执行 <code>insmod ak_fb.ko</code> 和 <code>insmod ak_gui.ko</code>。</li>
@@ -161,7 +173,8 @@
 <p>屏幕驱动加载完毕后，进入 <code>/usr/bin</code> 目录下，找到 <code>ak_vo_sample</code> 程序，该程序的作用就是在屏幕上输出视频或图像，使用 <code>ak_vo_sample -h</code> 命令可查看帮助信息。</p>
 <p>输出帮助信息后，能够看到 <code>ak_vo_sample -w 1024 -e 600 -x 0 -r 1920 -s 1080 -f /mnt/yuv -n 1 -i 4 -o 1 -l /mnt/anyka.logo.577.160.rgb</code> 这一条示例命令。在这条命令中我们只需要将 <code>/mnt/anyka.logo.577.160.rgb</code> 替换为 <code>/mnt/yuv</code> 目录下的任一文件名即可，也可以执行 <code>ak_vo_sample -w 1024 -e 600 -x 0 -r 1920 -s 1080 -f /mnt/yuv -n 1 -i 4 -o 1 -l /mnt/yuv*</code>。</p>
 <blockquote>
-<p>注：<br>前提是你的 <code>/mnt</code> 目录下已经按照上文要求的放置好了 <code>yuv</code> 文件夹。</p>
+<p>注：<br>
+前提是你的 <code>/mnt</code> 目录下已经按照上文要求的放置好了 <code>yuv</code> 文件夹。</p>
 </blockquote>
 <p>执行完该命令之后便可以看到屏幕中出现一帧一帧的动态图像了。</p>
 
@@ -176,14 +189,17 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/&title=AnyCloud37E 开发指南 - huigang39's blog&summary=AnyCloud 37 E 开发指南一、准备物品清单：
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/&title=AnyCloud37E 开发指南 - huigang39's blog&summary=AnyCloud 37 E 开发指南
+一、准备
+物品清单：
 
 开发板（屏幕、摄像头、SDIO WIFI 小板）× 1；
 UART 转 Type A 数据线 × 1；
 Micro-B 转 Type A 数据线 × 2；
 
 二、启动
-找到带有..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=AnyCloud37E 开发指南 - huigang39's blog&amp;body=https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+
+找..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=AnyCloud37E 开发指南 - huigang39's blog&amp;body=https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://huigang39.github.io/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"/>
@@ -200,7 +216,8 @@ Micro-B 转 Type A 数据线 × 2；
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>

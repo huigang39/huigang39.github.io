@@ -19,12 +19,12 @@
   <title>欧拉角与四元数 - huigang39's blog</title>
 
   
-    <meta name="description" content="欧拉角与四元数欧拉角简介简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：  图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。 在这里，坐标系可以是 世界坐标系（$xyz$），也可以是 刚体坐标系 （$XYZ$），它的旋转顺序也是任意的。 欧拉角可以分成两种情况：  静态：绕 世界坐标系 （$xyz$）三个">
+    <meta name="description" content="欧拉角与四元数 欧拉角 简介 简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：  图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。 在这里，坐标系可以是 世界坐标系（$xyz$），也可以是 刚体坐标系 （$XYZ$），它的旋转顺序也是任意的。 欧拉角可以分成两种情况：  静态：绕 世界坐标系 （$xyz$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="欧拉角与四元数">
 <meta property="og:url" content="https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/index.html">
 <meta property="og:site_name" content="huigang39&#39;s blog">
-<meta property="og:description" content="欧拉角与四元数欧拉角简介简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：  图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。 在这里，坐标系可以是 世界坐标系（$xyz$），也可以是 刚体坐标系 （$XYZ$），它的旋转顺序也是任意的。 欧拉角可以分成两种情况：  静态：绕 世界坐标系 （$xyz$）三个">
+<meta property="og:description" content="欧拉角与四元数 欧拉角 简介 简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：  图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。 在这里，坐标系可以是 世界坐标系（$xyz$），也可以是 刚体坐标系 （$XYZ$），它的旋转顺序也是任意的。 欧拉角可以分成两种情况：  静态：绕 世界坐标系 （$xyz$">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/huigang39/picbed/main/202304082213857.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/huigang39/picbed/main/202304082214325.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216066.webp">
 <meta property="og:image" content="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216007.webp">
 <meta property="article:published_time" content="2023-02-03T12:54:00.000Z">
-<meta property="article:modified_time" content="2024-02-14T12:34:35.885Z">
+<meta property="article:modified_time" content="2024-02-14T12:41:31.031Z">
 <meta property="article:author" content="Huigang Wang">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -86,7 +86,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title active" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title active" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -100,7 +100,7 @@
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-02-03T12:54:00.000Z">2023-02-03</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T12:34:35.885Z">2024-02-14</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-02-03T12:54:00.000Z">2023-02-03</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T12:41:31.031Z">2024-02-14</time></span></div></div>
 </div>
 
     
@@ -111,14 +111,17 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="欧拉角与四元数"><a href="#欧拉角与四元数" class="headerlink" title="欧拉角与四元数"></a>欧拉角与四元数</h2><h3 id="欧拉角"><a href="#欧拉角" class="headerlink" title="欧拉角"></a>欧拉角</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：</p>
+  </div><article class="md-text content"><h2 id="欧拉角与四元数">欧拉角与四元数</h2>
+<h3 id="欧拉角">欧拉角</h3>
+<h4 id="简介">简介</h4>
+<p>简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082213857.gif" alt="欧拉角"></p>
 <p>图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。</p>
 <p>在这里，坐标系可以是 <strong>世界坐标系</strong>（$xyz$），也可以是 <strong>刚体坐标系</strong> （$XYZ$），它的旋转顺序也是任意的。</p>
 <p>欧拉角可以分成两种情况：</p>
 <ol>
-<li>静态：绕 <strong>世界坐标系</strong> （$xyz$）三个轴的旋转，由于 _物体旋转过程中坐标轴保持静止_，所以称为静态；</li>
-<li>动态：绕 <strong>刚体坐标系</strong> （$XYZ$）三个轴的旋转，由于 _物体旋转过程中坐标轴随着物体做相同的转动_，所以称为动态。</li>
+<li>静态：绕 <strong>世界坐标系</strong> （$xyz$）三个轴的旋转，由于 <em>物体旋转过程中坐标轴保持静止</em>，所以称为静态；</li>
+<li>动态：绕 <strong>刚体坐标系</strong> （$XYZ$）三个轴的旋转，由于 <em>物体旋转过程中坐标轴随着物体做相同的转动</em>，所以称为动态。</li>
 </ol>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082214325.png" alt="欧拉角"></p>
 <p>上图具体的旋转步骤为：</p>
@@ -133,11 +136,14 @@
 <p>如何区分 Roll、Pitch、Yaw？</p>
 <p>首先应先给定物体一个姿态，就是确定其前后、左右、上下，这样就能对应 Roll、Pitch、Yaw。结合建立在物体上的坐标系，就可以搞定了。</p>
 <ol>
-<li><p>绕着 <strong>前后</strong> 轴（Front-to-Back Axis）旋转角度为 <strong>Roll</strong>；</p>
+<li>
+<p>绕着 <strong>前后</strong> 轴（Front-to-Back Axis）旋转角度为 <strong>Roll</strong>；</p>
 </li>
-<li><p>绕着 <strong>左右</strong> 轴（Side-to-Side Axis）旋转角度为 <strong>Pitch</strong>；</p>
+<li>
+<p>绕着 <strong>左右</strong> 轴（Side-to-Side Axis）旋转角度为 <strong>Pitch</strong>；</p>
 </li>
-<li><p>绕着 <strong>竖直</strong> 轴（Vertical Axis）旋转角度为 <strong>Yaw</strong>。</p>
+<li>
+<p>绕着 <strong>竖直</strong> 轴（Vertical Axis）旋转角度为 <strong>Yaw</strong>。</p>
 </li>
 </ol>
 <p>Tips：</p>
@@ -148,21 +154,29 @@
 </ol>
 </blockquote>
 <p>上面动图旋转步骤为 $z \rightarrow Y \rightarrow X$ ，按照顺序标记为 $zYX$ ，加上角度即为一个完整欧拉角：</p>
-<p>$$<br>zYX - (\psi, \theta, \phi)<br>$$</p>
-<h4 id="右手坐标系"><a href="#右手坐标系" class="headerlink" title="右手坐标系"></a>右手坐标系</h4><p>如上所述，欧拉角遵循的是 <strong>右手坐标系</strong>，那么与之相对的肯定有左手坐标系，左手坐标系与右手坐标系最大的区别就是，如果将这两个坐标系的两个轴方向对齐，那么另一个轴的方向必定相反，因为左手坐标系目前我还没有用过，所以这里只列出右手坐标系的判断规则。如下图所示：</p>
+<p>$$<br>
+zYX - (\psi, \theta, \phi)<br>
+$$</p>
+<h4 id="右手坐标系">右手坐标系</h4>
+<p>如上所述，欧拉角遵循的是 <strong>右手坐标系</strong>，那么与之相对的肯定有左手坐标系，左手坐标系与右手坐标系最大的区别就是，如果将这两个坐标系的两个轴方向对齐，那么另一个轴的方向必定相反，因为左手坐标系目前我还没有用过，所以这里只列出右手坐标系的判断规则。如下图所示：</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304192212001.png" alt="右手坐标系"></p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082214816.png" alt="右手坐标系"></p>
-<h4 id="万向节死锁"><a href="#万向节死锁" class="headerlink" title="万向节死锁"></a>万向节死锁</h4><p>万向节死锁发生在欧拉角形式下，是由欧拉旋转定义本身造成的。</p>
+<h4 id="万向节死锁">万向节死锁</h4>
+<p>万向节死锁发生在欧拉角形式下，是由欧拉旋转定义本身造成的。</p>
 <p>当任何一个坐标轴旋转角度为 90 度时，就会有两个轴的旋转动作起到对总体旋转结果相同的效果，这就被称为“死锁”，动图如下所示：</p>
-<h5 id="1-翻滚"><a href="#1-翻滚" class="headerlink" title="1. 翻滚"></a>1. 翻滚</h5><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082215649.webp" alt="翻滚"></p>
-<h5 id="2-俯仰"><a href="#2-俯仰" class="headerlink" title="2. 俯仰"></a>2. 俯仰</h5><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082215947.gif" alt="俯仰"></p>
-<h5 id="3-偏航"><a href="#3-偏航" class="headerlink" title="3. 偏航"></a>3. 偏航</h5><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216066.webp" alt="偏航"></p>
-<h5 id="4-死锁"><a href="#4-死锁" class="headerlink" title="4. 死锁"></a>4. 死锁</h5><p>现在看起来，这个陀螺仪一切正常，在船体发生任意方向摇晃都可以通过自身调节来应对。然而，真的是这样吗？</p>
+<h5 id="1-翻滚">1. 翻滚</h5>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082215649.webp" alt="翻滚"></p>
+<h5 id="2-俯仰">2. 俯仰</h5>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082215947.gif" alt="俯仰"></p>
+<h5 id="3-偏航">3. 偏航</h5>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216066.webp" alt="偏航"></p>
+<h5 id="4-死锁">4. 死锁</h5>
+<p>现在看起来，这个陀螺仪一切正常，在船体发生任意方向摇晃都可以通过自身调节来应对。然而，真的是这样吗？</p>
 <p>假如，船体发生了剧烈的变化，此时船首仰起了 90 度，此时的陀螺仪调节状态如下图：</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202304082216007.webp" alt="死锁"></p>
 <p>现在，转子不平衡了，陀螺仪的三板斧不起作用了。它失去了自身的调节能力。那么这是为什么呢？</p>
-<p>之前陀螺仪之所以能通过自身调节，保持平衡，是因为存在可以相对旋转的连接头。在这种情况下，_已经不存在可以相对旋转的连接头了_。</p>
-<p>那么连接头呢？去了哪里？显然，它还是在那里，只不过是，_连接头可以旋转的相对方向不是现在需要的按着 $+Z$ 轴方向_。从上图中，我们清楚地看到：</p>
+<p>之前陀螺仪之所以能通过自身调节，保持平衡，是因为存在可以相对旋转的连接头。在这种情况下，<em>已经不存在可以相对旋转的连接头了</em>。</p>
+<p>那么连接头呢？去了哪里？显然，它还是在那里，只不过是，<em>连接头可以旋转的相对方向不是现在需要的按着 $+Z$ 轴方向</em>。从上图中，我们清楚地看到：</p>
 <ul>
 <li>红色连接头：可以给予一个相对俯仰的自由度。</li>
 <li>绿色连接头：可以给予一个相对偏航的自由度。</li>
@@ -171,11 +185,25 @@
 <p>没错，三个连接头，提供的自由度只对应了 <strong>俯仰</strong> 和 <strong>偏航</strong> 两个自由度，<strong>翻滚</strong> 自由度丢失了。这就是陀螺仪上的“万向节死锁”问题。</p>
 <p>总结来说，欧拉角的“万向节死锁”问题，是由于欧拉旋转定义本身造成的。这种围绕选旋转前固定轴的先 $Z$、再 $X$、再 $Y$ 的旋转操作，与其最终所预期的三个轴向可以旋转的结果并非一定是一对一的映射。某些情况下是多对一的映射，造成一些旋转自由度的缺失，也就是“死锁”。</p>
 <p>在编程中很难规避死锁，所以现在更多使用四元数形式进行姿态表示与旋转。</p>
-<h3 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h3><p>$$<br>q &#x3D; w + xi + yj + zk<br>$$</p>
+<h3 id="四元数">四元数</h3>
+<p>$$<br>
+q = w + xi + yj + zk<br>
+$$</p>
 <p><a target="_blank" rel="noopener" href="https://krasjet.github.io/quaternion/quaternion.pdf">quaternion.pdf (krasjet.github.io)</a></p>
 <p><a target="_blank" rel="noopener" href="https://quaternions.online/">Quaternions - Visualisation</a></p>
 <p><a target="_blank" rel="noopener" href="https://eater.net/quaternions/video/intro">Visualizing quaternions | 3blue1brown + Ben Eater</a></p>
-<h4 id="四元数转欧拉角"><a href="#四元数转欧拉角" class="headerlink" title="四元数转欧拉角"></a>四元数转欧拉角</h4><p>$$<br>\left[\begin{array}{c}<br>\phi \<br>\theta \<br>\psi<br>\end{array}\right]&#x3D;\left[\begin{array}{c}<br>\arctan \frac{2\left(q_{0} q_{1}+q_{2} q_{3}\right)}{1-2\left(q_{1}^{2}+q_{2}^{2}\right)} \<br>\arcsin \left(2\left(q_{0} q_{2}-q_{3} q_{1}\right)\right) \<br>\arctan \frac{2\left(q_{0} q_{3}+q_{1} q_{2}\right)}{1-2\left(q_{2}^{2}+q_{3}^{2}\right)}<br>\end{array}\right]<br>$$</p>
+<h4 id="四元数转欧拉角">四元数转欧拉角</h4>
+<p>$$<br>
+\left[\begin{array}{c}<br>
+\phi \<br>
+\theta \<br>
+\psi<br>
+\end{array}\right]=\left[\begin{array}{c}<br>
+\arctan \frac{2\left(q_{0} q_{1}+q_{2} q_{3}\right)}{1-2\left(q_{1}^{2}+q_{2}^{2}\right)} \<br>
+\arcsin \left(2\left(q_{0} q_{2}-q_{3} q_{1}\right)\right) \<br>
+\arctan \frac{2\left(q_{0} q_{3}+q_{1} q_{2}\right)}{1-2\left(q_{2}^{2}+q_{3}^{2}\right)}<br>
+\end{array}\right]<br>
+$$</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -188,10 +216,13 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/&title=欧拉角与四元数 - huigang39's blog&summary=欧拉角与四元数欧拉角简介简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/&title=欧拉角与四元数 - huigang39's blog&summary=欧拉角与四元数
+欧拉角
+简介
+简单来说，欧拉角就是物体绕坐标系的三个坐标轴（$X, Y, Z$）的旋转角度，可以用于表示刚体当前的姿态。如下图所示：
 
 图片中即为上述的三次旋转（其实可以绕某一轴，一次旋转即可达到最终位置）。
-在这里，坐标系..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=欧拉角与四元数 - huigang39's blog&amp;body=https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+在这里，..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=欧拉角与四元数 - huigang39's blog&amp;body=https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://huigang39.github.io/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"/>
@@ -208,7 +239,8 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>

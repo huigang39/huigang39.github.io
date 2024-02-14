@@ -19,12 +19,12 @@
   <title>链接装载库 - huigang39's blog</title>
 
   
-    <meta name="description" content="链接装载库一、内存、栈、堆一般应用程序内存空间有如下区域：  栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文； 堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应用程序动态分配的内存区域； 可执行文件映像：存储着可执行文件在内存中的映像，由装载器装载是将可执行文件的内存读取或映射到这里； 保留区：保留区并不是一个单一的内存区域">
+    <meta name="description" content="链接装载库 一、内存、栈、堆 一般应用程序内存空间有如下区域：  栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文； 堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应用程序动态分配的内存区域； 可执行文件映像：存储着可执行文件在内存中的映像，由装载器装载是将可执行文件的内存读取或映射到这里； 保留区：保留区并不是一个单一的内存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链接装载库">
 <meta property="og:url" content="https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/index.html">
 <meta property="og:site_name" content="huigang39&#39;s blog">
-<meta property="og:description" content="链接装载库一、内存、栈、堆一般应用程序内存空间有如下区域：  栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文； 堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应用程序动态分配的内存区域； 可执行文件映像：存储着可执行文件在内存中的映像，由装载器装载是将可执行文件的内存读取或映射到这里； 保留区：保留区并不是一个单一的内存区域">
+<meta property="og:description" content="链接装载库 一、内存、栈、堆 一般应用程序内存空间有如下区域：  栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文； 堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应用程序动态分配的内存区域； 可执行文件映像：存储着可执行文件在内存中的映像，由装载器装载是将可执行文件的内存读取或映射到这里； 保留区：保留区并不是一个单一的内存">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-20T04:41:00.000Z">
 <meta property="article:modified_time" content="2023-05-21T12:40:00.000Z">
@@ -71,7 +71,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -96,71 +96,81 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="链接装载库"><a href="#链接装载库" class="headerlink" title="链接装载库"></a>链接装载库</h2><h3 id="一、内存、栈、堆"><a href="#一、内存、栈、堆" class="headerlink" title="一、内存、栈、堆"></a>一、内存、栈、堆</h3><p>一般应用程序内存空间有如下区域：</p>
+  </div><article class="md-text content"><h2 id="链接装载库">链接装载库</h2>
+<h3 id="一、内存、栈、堆">一、内存、栈、堆</h3>
+<p>一般应用程序内存空间有如下区域：</p>
 <ul>
 <li>栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文；</li>
 <li>堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应用程序动态分配的内存区域；</li>
 <li>可执行文件映像：存储着可执行文件在内存中的映像，由装载器装载是将可执行文件的内存读取或映射到这里；</li>
 <li>保留区：保留区并不是一个单一的内存区域，而是对内存中受到保护而禁止访问的内存区域的总称，如通常 C 语言讲无效指针赋值为 0；（NULL），因此 0 地址正常情况下不可能有效的访问数据。</li>
 </ul>
-<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><p>栈保存了一个函数调用所需要的维护信息，常被称为堆栈帧（Stack Frame）或活动记录（Activate Record），一般包含以下几方面：</p>
+<h4 id="栈">栈</h4>
+<p>栈保存了一个函数调用所需要的维护信息，常被称为堆栈帧（Stack Frame）或活动记录（Activate Record），一般包含以下几方面：</p>
 <ul>
 <li>函数的返回地址和参数；</li>
 <li>临时变量：包括函数的非静态局部变量以及编译器自动生成的其他临时变量；</li>
 <li>保存上下文：包括函数调用前后需要保持不变的寄存器。</li>
 </ul>
-<h4 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h4><p>堆分配算法：</p>
+<h4 id="堆">堆</h4>
+<p>堆分配算法：</p>
 <ul>
 <li>空闲链表（Free List）；</li>
 <li>位图（Bitmap）；</li>
 <li>对象池。</li>
 </ul>
-<h3 id="“段错误（segment-fault）”-或-“非法操作，该内存地址不能-read-write”"><a href="#“段错误（segment-fault）”-或-“非法操作，该内存地址不能-read-write”" class="headerlink" title="“段错误（segment fault）” 或 “非法操作，该内存地址不能 read&#x2F;write”"></a>“段错误（segment fault）” 或 “非法操作，该内存地址不能 read&#x2F;write”</h3><p>典型的非法指针解引用造成的错误。当指针指向一个不允许读写的内存地址，而程序却试图利用指针来读或写该地址时，会出现这个错误。</p>
+<h3 id="“段错误（segment-fault）”-或-“非法操作，该内存地址不能-read-write”">“段错误（segment fault）” 或 “非法操作，该内存地址不能 read/write”</h3>
+<p>典型的非法指针解引用造成的错误。当指针指向一个不允许读写的内存地址，而程序却试图利用指针来读或写该地址时，会出现这个错误。</p>
 <p>普遍原因：</p>
 <ul>
 <li>将指针初始化为 NULL，之后没有给它一个合理的值就开始使用指针；</li>
 <li>没用初始化栈中的指针，指针的值一般会是随机数，之后就直接开始使用指针。</li>
 </ul>
-<h3 id="编译链接"><a href="#编译链接" class="headerlink" title="编译链接"></a>编译链接</h3><h4 id="各平台文件格式"><a href="#各平台文件格式" class="headerlink" title="各平台文件格式"></a>各平台文件格式</h4><table>
+<h3 id="编译链接">编译链接</h3>
+<h4 id="各平台文件格式">各平台文件格式</h4>
+<table>
 <thead>
 <tr>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">平台</td>
-<td align="center">可执行文件</td>
-<td align="center">目标文件</td>
-<td align="center">动态库&#x2F;共享对象</td>
-<td align="center">静态库</td>
+<tbody>
+<tr>
+<td style="text-align:center">平台</td>
+<td style="text-align:center">可执行文件</td>
+<td style="text-align:center">目标文件</td>
+<td style="text-align:center">动态库/共享对象</td>
+<td style="text-align:center">静态库</td>
 </tr>
 <tr>
-<td align="center">Windows</td>
-<td align="center">exe</td>
-<td align="center">obj</td>
-<td align="center">dll</td>
-<td align="center">lib</td>
+<td style="text-align:center">Windows</td>
+<td style="text-align:center">exe</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">dll</td>
+<td style="text-align:center">lib</td>
 </tr>
 <tr>
-<td align="center">Unix&#x2F;Linux</td>
-<td align="center">ELF、out</td>
-<td align="center">o</td>
-<td align="center">so</td>
-<td align="center">a</td>
+<td style="text-align:center">Unix/Linux</td>
+<td style="text-align:center">ELF、out</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">so</td>
+<td style="text-align:center">a</td>
 </tr>
 <tr>
-<td align="center">Mac</td>
-<td align="center">Mach-O</td>
-<td align="center">o</td>
-<td align="center">dylib、tbd、framework</td>
-<td align="center">a、framework</td>
+<td style="text-align:center">Mac</td>
+<td style="text-align:center">Mach-O</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">dylib、tbd、framework</td>
+<td style="text-align:center">a、framework</td>
 </tr>
-</tbody></table>
-<h4 id="编译链接过程"><a href="#编译链接过程" class="headerlink" title="编译链接过程"></a>编译链接过程</h4><ol>
+</tbody>
+</table>
+<h4 id="编译链接过程">编译链接过程</h4>
+<ol>
 <li>预编译（预编译器处理如 <code>#include</code>、<code>#define</code> 等预编译指令，生成 <code>.i</code> 或 <code>.ii</code> 文件）；</li>
 <li>编译（编译器进行词法分析、语法分析、语义分析、中间代码生成、目标代码生成、优化，生成 <code>.s</code> 文件）；</li>
 <li>汇编（汇编器把汇编码翻译成机器码，生成 <code>.o</code> 文件）；</li>
@@ -170,95 +180,106 @@
 <p>现在版本 GCC 把预编译和编译合成一步，预编译编译程序 cc1、汇编器 as、连接器 ld。</p>
 <p>MSVC 编译环境，编译器 cl、连接器 link、可执行文件查看器 dumpbin。</p>
 </blockquote>
-<h4 id="目标文件"><a href="#目标文件" class="headerlink" title="目标文件"></a>目标文件</h4><p>编译器编译源代码后生成的文件叫做目标文件。目标文件从结构上讲，它是已经编译后的可执行文件格式，只是还没有经过链接的过程，其中可能有些符号或有些地址还没有被调整。</p>
+<h4 id="目标文件">目标文件</h4>
+<p>编译器编译源代码后生成的文件叫做目标文件。目标文件从结构上讲，它是已经编译后的可执行文件格式，只是还没有经过链接的过程，其中可能有些符号或有些地址还没有被调整。</p>
 <blockquote>
 <p>可执行文件（Windows 的 <code>.exe</code> 和 Linux 的 <code>ELF</code>）、动态链接库（Windows 的 <code>.dll</code> 和 Linux 的 <code>.so</code>）、静态链接库（Windows 的 <code>.lib</code> 和 Linux 的 <code>.a</code>）都是按照可执行文件格式存储（Windows 按照 PE-COFF，Linux 按照 ELF）。</p>
 </blockquote>
-<h5 id="目标文件格式"><a href="#目标文件格式" class="headerlink" title="目标文件格式"></a>目标文件格式</h5><ul>
+<h5 id="目标文件格式">目标文件格式</h5>
+<ul>
 <li>Windows 的 PE（Portable Executable），或称为 PE-COFF，<code>.obj</code> 格式；</li>
 <li>Linux 的 ELF（Executable Linkable Format），<code>.o</code> 格式；</li>
-<li>Intel&#x2F;Microsoft 的 OMF（Object Module Format）；</li>
+<li>Intel/Microsoft 的 OMF（Object Module Format）；</li>
 <li>Unix 的 <code>a.out</code> 格式；</li>
 <li>MS-DOS 的 <code>.COM</code> 格式。</li>
 </ul>
 <blockquote>
 <p>PE 和 ELF 都是 COFF（Common File Format）的变种。</p>
 </blockquote>
-<h5 id="目标文件存储结构"><a href="#目标文件存储结构" class="headerlink" title="目标文件存储结构"></a>目标文件存储结构</h5><table>
+<h5 id="目标文件存储结构">目标文件存储结构</h5>
+<table>
 <thead>
 <tr>
-<th align="center"></th>
-<th align="center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">段</td>
-<td align="center">功能</td>
+<tbody>
+<tr>
+<td style="text-align:center">段</td>
+<td style="text-align:center">功能</td>
 </tr>
 <tr>
-<td align="center">File Header</td>
-<td align="center">文件头，描述整个文件的文件属性（包括文件是否可执行、是静态链接或动态连接及入口地址、目标硬件、目标操作系统等）</td>
+<td style="text-align:center">File Header</td>
+<td style="text-align:center">文件头，描述整个文件的文件属性（包括文件是否可执行、是静态链接或动态连接及入口地址、目标硬件、目标操作系统等）</td>
 </tr>
 <tr>
-<td align="center">.text section</td>
-<td align="center">代码段，执行语句编译成的机器代码</td>
+<td style="text-align:center">.text section</td>
+<td style="text-align:center">代码段，执行语句编译成的机器代码</td>
 </tr>
 <tr>
-<td align="center">.data section</td>
-<td align="center">数据段，已初始化的全局变量和局部静态变量</td>
+<td style="text-align:center">.data section</td>
+<td style="text-align:center">数据段，已初始化的全局变量和局部静态变量</td>
 </tr>
 <tr>
-<td align="center">.bss section</td>
-<td align="center">BSS 段（Block Started by Symbol），未初始化的全局变量和局部静态变量（因为默认值为 0，所以只是在此预留位置，不占空间）</td>
+<td style="text-align:center">.bss section</td>
+<td style="text-align:center">BSS 段（Block Started by Symbol），未初始化的全局变量和局部静态变量（因为默认值为 0，所以只是在此预留位置，不占空间）</td>
 </tr>
 <tr>
-<td align="center">.rodata section</td>
-<td align="center">只读数据段，存放只读数据，一般是程序里面的只读变量（如 const 修饰的变量）和字符串常量</td>
+<td style="text-align:center">.rodata section</td>
+<td style="text-align:center">只读数据段，存放只读数据，一般是程序里面的只读变量（如 const 修饰的变量）和字符串常量</td>
 </tr>
 <tr>
-<td align="center">.comment section</td>
-<td align="center">注释信息段，存放编译器版本信息</td>
+<td style="text-align:center">.comment section</td>
+<td style="text-align:center">注释信息段，存放编译器版本信息</td>
 </tr>
 <tr>
-<td align="center">.note. GNU-stack section</td>
-<td align="center">堆栈提示段</td>
+<td style="text-align:center">.note. GNU-stack section</td>
+<td style="text-align:center">堆栈提示段</td>
 </tr>
-</tbody></table>
-<h4 id="链接的接口-——-符号"><a href="#链接的接口-——-符号" class="headerlink" title="链接的接口 —— 符号"></a>链接的接口 —— 符号</h4><p>在链接中，目标文件之间相互拼合实际上是目标文件之间对地址的引用，即对函数和变量的地址的引用。我们将函数和变量统称为符号（Symbol），函数名或变量名就是符号名（Symbol Name）。</p>
+</tbody>
+</table>
+<h4 id="链接的接口-——-符号">链接的接口 —— 符号</h4>
+<p>在链接中，目标文件之间相互拼合实际上是目标文件之间对地址的引用，即对函数和变量的地址的引用。我们将函数和变量统称为符号（Symbol），函数名或变量名就是符号名（Symbol Name）。</p>
 <p>如下符号表（Symbol Table）：</p>
 <table>
 <thead>
 <tr>
-<th align="center"></th>
-<th align="center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Symbol（符号）</td>
-<td align="center">Symbol Value（地址）</td>
+<tbody>
+<tr>
+<td style="text-align:center">Symbol（符号）</td>
+<td style="text-align:center">Symbol Value（地址）</td>
 </tr>
 <tr>
-<td align="center">main</td>
-<td align="center">0x100</td>
+<td style="text-align:center">main</td>
+<td style="text-align:center">0x100</td>
 </tr>
 <tr>
-<td align="center">Add</td>
-<td align="center">0x123</td>
+<td style="text-align:center">Add</td>
+<td style="text-align:center">0x123</td>
 </tr>
 <tr>
-<td align="center">…</td>
-<td align="center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
 </tr>
-</tbody></table>
-<h3 id="Linux-的共享库（Shared-Library）"><a href="#Linux-的共享库（Shared-Library）" class="headerlink" title="Linux 的共享库（Shared Library）"></a>Linux 的共享库（Shared Library）</h3><p>Linux 下的共享库就是普通的 ELF 共享对象。</p>
+</tbody>
+</table>
+<h3 id="Linux-的共享库（Shared-Library）">Linux 的共享库（Shared Library）</h3>
+<p>Linux 下的共享库就是普通的 ELF 共享对象。</p>
 <p>共享库版本更新应该保证二进制接口 ABI（Application Binary Interface）的兼容</p>
-<h4 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h4><p><code>libname. So. X. Y. Z</code></p>
+<h4 id="命名">命名</h4>
+<p><code>libname. So. X. Y. Z</code></p>
 <ul>
 <li>X：主版本号，不同主版本号的库之间不兼容，需要重新编译；</li>
 <li>Y：次版本号，高版本号向后兼容低版本号；</li>
 <li>Z：发布版本号，不对接口进行更改，完全兼容。</li>
 </ul>
-<h4 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h4><p>大部分包括 Linux 在内的开源系统遵循 FHS（File Hierarchy Standard）的标准，这标准规定了系统文件如何存放，包括各个目录结构、组织和作用。</p>
+<h4 id="路径">路径</h4>
+<p>大部分包括 Linux 在内的开源系统遵循 FHS（File Hierarchy Standard）的标准，这标准规定了系统文件如何存放，包括各个目录结构、组织和作用。</p>
 <ul>
 <li><code>/lib</code>：存放系统最关键和最基础的共享库，如动态链接器、C 语言运行库、数学库等；</li>
 <li><code>/usr/lib</code>：存放非系统运行时所需要的关键性的库，主要是开发库；</li>
@@ -267,78 +288,79 @@
 <blockquote>
 <p>动态链接器会在 <code>/lib</code>、<code>/usr/lib</code> 和由 <code>/etc/ld. So. Conf</code> 配置文件指定的，目录中查找共享库。</p>
 </blockquote>
-<h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><ul>
+<h4 id="环境变量">环境变量</h4>
+<ul>
 <li><code>LD_LIBRARY_PATH</code>：临时改变某个应用程序的共享库查找路径，而不会影响其他应用程序；</li>
 <li><code>LD_PRELOAD</code>：指定预先装载的一些共享库甚至是目标文件；</li>
 <li><code>LD_DEBUG</code>：打开动态链接器的调试功能。</li>
 </ul>
-<h4 id="So-共享库的编写"><a href="#So-共享库的编写" class="headerlink" title="So 共享库的编写"></a>So 共享库的编写</h4><p>使用 VS Code 编写共享库，创建一个名为 MySharedLib 的共享库：</p>
+<h4 id="So-共享库的编写">So 共享库的编写</h4>
+<p>使用 VS Code 编写共享库，创建一个名为 MySharedLib 的共享库：</p>
 <p>CMakeLists. Txt：</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Cmake_minimum_required</span> (VERSION <span class="number">3.10</span>)</span><br><span class="line"><span class="keyword">Project</span> (MySharedLib)</span><br><span class="line"><span class="keyword">Set</span> (CMAKE_CXX_STANDARD <span class="number">11</span>)</span><br><span class="line"><span class="keyword">Add_library</span> (MySharedLib SHARED library. Cpp library. H)</span><br></pre></td></tr></table></figure>
-
 <p>Library. H：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> MYSHAREDLIB_LIBRARY_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MYSHAREDLIB_LIBRARY_H</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 打印 Hello World!</span></span><br><span class="line"><span class="function">Void <span class="title">hello</span> <span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用可变模版参数求和</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">T <span class="title">sum</span> <span class="params">(T t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Return t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Types&gt;</span><br><span class="line"><span class="function">T <span class="title">sum</span> <span class="params">(T first, Types... Rest)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> first + <span class="built_in">sum</span>&lt;T&gt;(rest...);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
 <p>Library. Cpp：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;library. H&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">Void <span class="title">hello</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Std:: cout &lt;&lt; <span class="string">&quot;Hello, World!&quot;</span> &lt;&lt; std:: endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="So-共享库的使用"><a href="#So-共享库的使用" class="headerlink" title="So 共享库的使用"></a>So 共享库的使用</h4><p>使用 VS Code 调用共享库，创建一个名为 TestSharedLib 的可执行项目：</p>
+<h4 id="So-共享库的使用">So 共享库的使用</h4>
+<p>使用 VS Code 调用共享库，创建一个名为 TestSharedLib 的可执行项目：</p>
 <p>CMakeLists. Txt：</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Cmake_minimum_required</span> (VERSION <span class="number">3.10</span>)</span><br><span class="line"><span class="keyword">Project</span> (TestSharedLib)</span><br><span class="line"></span><br><span class="line"><span class="comment"># C++11 编译</span></span><br><span class="line"><span class="keyword">Set</span> (CMAKE_CXX_STANDARD <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 头文件路径</span></span><br><span class="line"><span class="keyword">Set</span> (INC_DIR /home/xx/code/clion/MySharedLib)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 库文件路径</span></span><br><span class="line"><span class="keyword">Set</span> (LIB_DIR /home/xx/code/clion/MySharedLib/cmake-build-debug)</span><br><span class="line"></span><br><span class="line"><span class="keyword">Include_directories</span> (<span class="variable">$&#123;INC_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">Link_directories</span> (<span class="variable">$&#123;LIB_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">Link_libraries</span> (MySharedLib)</span><br><span class="line"></span><br><span class="line"><span class="keyword">Add_executable</span> (TestSharedLib main. Cpp)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 链接 MySharedLib 库</span></span><br><span class="line"><span class="keyword">Target_link_libraries</span> (TestSharedLib MySharedLib)</span><br></pre></td></tr></table></figure>
-
 <p>Main. Cpp：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;library. H&quot;</span></span></span><br><span class="line"></span><br><span class="line">Using std:: cout;</span><br><span class="line">Using std:: endl;</span><br><span class="line"></span><br><span class="line"><span class="function">Int <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">Hello</span> ();</span><br><span class="line">    Cout &lt;&lt; <span class="string">&quot;1 + 2 = &quot;</span> &lt;&lt; <span class="built_in">sum</span> (<span class="number">1</span>, <span class="number">2</span>) &lt;&lt; endl;</span><br><span class="line">    Cout &lt;&lt; <span class="string">&quot;1 + 2 + 3 = &quot;</span> &lt;&lt; <span class="built_in">sum</span> (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    Return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>执行结果：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello, World!</span><br><span class="line">1 + 2 = 3</span><br><span class="line">1 + 2 + 3 = 6</span><br></pre></td></tr></table></figure>
-
-<h3 id="Windows-应用程序入口函数"><a href="#Windows-应用程序入口函数" class="headerlink" title="Windows 应用程序入口函数"></a>Windows 应用程序入口函数</h3><ul>
+<h3 id="Windows-应用程序入口函数">Windows 应用程序入口函数</h3>
+<ul>
 <li>GUI（Graphical User Interface）应用，链接器选项：<code>/SUBSYSTEM:WINDOWS</code></li>
 <li>CUI（Console User Interface）应用，链接器选项：<code>/SUBSYSTEM:CONSOLE</code></li>
 </ul>
 <p><code>_tWinMain</code> 与 <code>_tmain</code> 函数声明：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Int WINAPI _tWinMain (</span><br><span class="line">    HINSTANCE hInstanceExe,</span><br><span class="line">    HINSTANCE,</span><br><span class="line">    PTSTR pszCmdLine,</span><br><span class="line">    Int nCmdShow);</span><br><span class="line"></span><br><span class="line">Int _tmain (</span><br><span class="line">    Int argc,</span><br><span class="line">    TCHAR *argv[],</span><br><span class="line">    TCHAR *envp[]);</span><br></pre></td></tr></table></figure>
-
 <table>
 <thead>
 <tr>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">应用程序类型</td>
-<td align="center">入口点函数</td>
-<td align="center">嵌入可执行文件的启动函数</td>
+<tbody>
+<tr>
+<td style="text-align:center">应用程序类型</td>
+<td style="text-align:center">入口点函数</td>
+<td style="text-align:center">嵌入可执行文件的启动函数</td>
 </tr>
 <tr>
-<td align="center">处理 ANSI 字符（串）的 GUI 应用程序</td>
-<td align="center"><code>_tWinMain (WinMain)</code></td>
-<td align="center"><code>WinMainCRTSartup</code></td>
+<td style="text-align:center">处理 ANSI 字符（串）的 GUI 应用程序</td>
+<td style="text-align:center"><code>_tWinMain (WinMain)</code></td>
+<td style="text-align:center"><code>WinMainCRTSartup</code></td>
 </tr>
 <tr>
-<td align="center">处理 Unicode 字符（串）的 GUI 应用程序</td>
-<td align="center"><code>_tWinMain (wWinMain)</code></td>
-<td align="center"><code>wWinMainCRTSartup</code></td>
+<td style="text-align:center">处理 Unicode 字符（串）的 GUI 应用程序</td>
+<td style="text-align:center"><code>_tWinMain (wWinMain)</code></td>
+<td style="text-align:center"><code>wWinMainCRTSartup</code></td>
 </tr>
 <tr>
-<td align="center">处理 ANSI 字符（串）的 CUI 应用程序</td>
-<td align="center"><code>_tmain (Main)</code></td>
-<td align="center"><code>mainCRTSartup</code></td>
+<td style="text-align:center">处理 ANSI 字符（串）的 CUI 应用程序</td>
+<td style="text-align:center"><code>_tmain (Main)</code></td>
+<td style="text-align:center"><code>mainCRTSartup</code></td>
 </tr>
 <tr>
-<td align="center">处理 Unicode 字符（串）的 CUI 应用程序</td>
-<td align="center"><code>_tmain (wMain)</code></td>
-<td align="center"><code>wmainCRTSartup</code></td>
+<td style="text-align:center">处理 Unicode 字符（串）的 CUI 应用程序</td>
+<td style="text-align:center"><code>_tmain (wMain)</code></td>
+<td style="text-align:center"><code>wmainCRTSartup</code></td>
 </tr>
 <tr>
-<td align="center">动态链接库（Dynamic-Link Library）</td>
-<td align="center"><code>DllMain</code></td>
-<td align="center"><code>_DllMainCRTStartup</code></td>
+<td style="text-align:center">动态链接库（Dynamic-Link Library）</td>
+<td style="text-align:center"><code>DllMain</code></td>
+<td style="text-align:center"><code>_DllMainCRTStartup</code></td>
 </tr>
-</tbody></table>
-<h3 id="Windows-的动态链接库（Dynamic-Link-Library）"><a href="#Windows-的动态链接库（Dynamic-Link-Library）" class="headerlink" title="Windows 的动态链接库（Dynamic-Link Library）"></a>Windows 的动态链接库（Dynamic-Link Library）</h3><h4 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h4><ul>
+</tbody>
+</table>
+<h3 id="Windows-的动态链接库（Dynamic-Link-Library）">Windows 的动态链接库（Dynamic-Link Library）</h3>
+<h4 id="用处">用处</h4>
+<ul>
 <li>扩展了应用程序的特性；</li>
 <li>简化了项目管理；</li>
 <li>有助于节省内存；</li>
@@ -347,7 +369,8 @@
 <li>有助于解决平台间的差异；</li>
 <li>可以用于特殊目的。</li>
 </ul>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul>
+<h4 id="注意">注意</h4>
+<ul>
 <li>创建 DLL，事实上是在创建可供一个可执行模块调用的函数；</li>
 <li>当一个模块提供一个内存分配函数（malloc、new）的时候，它必须同时提供另一个内存释放函数（free、delete）；</li>
 <li>在使用 C 和 C++ 混编的时候，要使用 extern “C” 修饰符；</li>
@@ -355,7 +378,8 @@
 <li>DLL 模块：cpp 文件中的 <code>__declspec (dllexport)</code> 写在 include 头文件之前；</li>
 <li>调用 DLL 的可执行模块：cpp 文件的 <code>__declspec (dllimport)</code> 之前不应该定义 MYLIBAPI。</li>
 </ul>
-<h4 id="加载-Windows-程序的搜索顺序"><a href="#加载-Windows-程序的搜索顺序" class="headerlink" title="加载 Windows 程序的搜索顺序"></a>加载 Windows 程序的搜索顺序</h4><ol>
+<h4 id="加载-Windows-程序的搜索顺序">加载 Windows 程序的搜索顺序</h4>
+<ol>
 <li>包含可执行文件的目录；</li>
 <li>Windows 的系统目录，可以通过 GetSystemDirectory 得到；</li>
 <li>16 位的系统目录，即 Windows 目录中的 System 子目录；</li>
@@ -363,58 +387,63 @@
 <li>进程的当前目录；</li>
 <li>PATH 环境变量中所列出的目录。</li>
 </ol>
-<h4 id="DLL-入口函数"><a href="#DLL-入口函数" class="headerlink" title="DLL 入口函数"></a>DLL 入口函数</h4><p>DllMain 函数：</p>
+<h4 id="DLL-入口函数">DLL 入口函数</h4>
+<p>DllMain 函数：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">DllMain</span> <span class="params">(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">Switch</span> (fdwReason)</span><br><span class="line">    &#123;</span><br><span class="line">    Case DLL_PROCESS_ATTACH:</span><br><span class="line">        <span class="comment">// 第一次将一个 DLL 映射到进程地址空间时调用</span></span><br><span class="line">        <span class="comment">// The DLL is being mapped into the process&#x27; address space.</span></span><br><span class="line">        Break;</span><br><span class="line"></span><br><span class="line">    Case DLL_THREAD_ATTACH:</span><br><span class="line">        <span class="comment">// 当进程创建一个线程的时候，用于告诉 DLL 执行与线程相关的初始化（非主线程执行）</span></span><br><span class="line">        <span class="comment">// A thread is bing created.</span></span><br><span class="line">        Break;</span><br><span class="line"></span><br><span class="line">    Case DLL_THREAD_DETACH:</span><br><span class="line">        <span class="comment">// 系统调用 ExitThread 线程退出前，即将终止的线程通过告诉 DLL 执行与线程相关的清理</span></span><br><span class="line">        <span class="comment">// A thread is exiting cleanly.</span></span><br><span class="line">        Break;</span><br><span class="line"></span><br><span class="line">    Case DLL_PROCESS_DETACH:</span><br><span class="line">        <span class="comment">// 将一个 DLL 从进程的地址空间时调用</span></span><br><span class="line">        <span class="comment">// The DLL is being unmapped from the process&#x27; address space.</span></span><br><span class="line">        Break;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Return</span> (TRUE); <span class="comment">// Used only for DLL_PROCESS_ATTACH</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="载入卸载库"><a href="#载入卸载库" class="headerlink" title="载入卸载库"></a>载入卸载库</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 载入库</span></span><br><span class="line"><span class="function">HMODULE WINAPI <span class="title">LoadLibrary</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ LPCTSTR lpFileName)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function">HMODULE <span class="title">LoadLibraryExA</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    LPCSTR lpLibFileName,</span></span></span><br><span class="line"><span class="params"><span class="function">    HANDLE hFile,</span></span></span><br><span class="line"><span class="params"><span class="function">    DWORD dwFlags)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 若要在通用 Windows 平台（UWP）应用中加载 Win32 DLL，需要调用 LoadPackagedLibrary，而不是 LoadLibrary 或 LoadLibraryEx</span></span><br><span class="line"><span class="function">HMODULE <span class="title">LoadPackagedLibrary</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    LPCWSTR lpwLibFileName,</span></span></span><br><span class="line"><span class="params"><span class="function">    DWORD Reserved)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 卸载库</span></span><br><span class="line"><span class="function">BOOL WINAPI <span class="title">FreeLibrary</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ HMODULE hModule)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 卸载库和退出线程</span></span><br><span class="line"><span class="function">VOID WINAPI <span class="title">FreeLibraryAndExitThread</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ HMODULE hModule,</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ DWORD dwExitCode)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="显示地链接到导出符号"><a href="#显示地链接到导出符号" class="headerlink" title="显示地链接到导出符号"></a>显示地链接到导出符号</h4><p>GetProcAddress 函数声明：</p>
+<h4 id="载入卸载库">载入卸载库</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 载入库</span></span><br><span class="line"><span class="function">HMODULE WINAPI <span class="title">LoadLibrary</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ LPCTSTR lpFileName)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function">HMODULE <span class="title">LoadLibraryExA</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    LPCSTR lpLibFileName,</span></span></span><br><span class="line"><span class="params"><span class="function">    HANDLE hFile,</span></span></span><br><span class="line"><span class="params"><span class="function">    DWORD dwFlags)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 若要在通用 Windows 平台（UWP）应用中加载 Win32 DLL，需要调用 LoadPackagedLibrary，而不是 LoadLibrary 或 LoadLibraryEx</span></span><br><span class="line"><span class="function">HMODULE <span class="title">LoadPackagedLibrary</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    LPCWSTR lpwLibFileName,</span></span></span><br><span class="line"><span class="params"><span class="function">    DWORD Reserved)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 卸载库</span></span><br><span class="line"><span class="function">BOOL WINAPI <span class="title">FreeLibrary</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ HMODULE hModule)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 卸载库和退出线程</span></span><br><span class="line"><span class="function">VOID WINAPI <span class="title">FreeLibraryAndExitThread</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ HMODULE hModule,</span></span></span><br><span class="line"><span class="params"><span class="function">    _In_ DWORD dwExitCode)</span></span>;</span><br></pre></td></tr></table></figure>
+<h4 id="显示地链接到导出符号">显示地链接到导出符号</h4>
+<p>GetProcAddress 函数声明：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">FARPROC <span class="title">GetProcAddress</span> <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    HMODULE hInstDll,</span></span></span><br><span class="line"><span class="params"><span class="function">    PCSTR pszSymbolName <span class="comment">// 只能接受 ANSI 字符串，不能是 Unicode</span></span></span></span><br><span class="line"><span class="params"><span class="function">)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="DumpBin-Exe-查看-DLL-信息"><a href="#DumpBin-Exe-查看-DLL-信息" class="headerlink" title="DumpBin. Exe 查看 DLL 信息"></a>DumpBin. Exe 查看 DLL 信息</h4><p>在 <code>VS 的开发人员命令提示符</code> 使用 <code>DumpBin. Exe</code> 可查看 DLL 库的导出段（导出的变量、函数、类名的符号）、相对虚拟地址（RVA，relative virtual address）。如：</p>
+<h4 id="DumpBin-Exe-查看-DLL-信息">DumpBin. Exe 查看 DLL 信息</h4>
+<p>在 <code>VS 的开发人员命令提示符</code> 使用 <code>DumpBin. Exe</code> 可查看 DLL 库的导出段（导出的变量、函数、类名的符号）、相对虚拟地址（RVA，relative virtual address）。如：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DUMPBIN <span class="literal">-exports</span> D:\mydll. Dll</span><br></pre></td></tr></table></figure>
-
-<h4 id="DLL-库的编写（导出一个-DLL-模块）"><a href="#DLL-库的编写（导出一个-DLL-模块）" class="headerlink" title="DLL 库的编写（导出一个 DLL 模块）"></a>DLL 库的编写（导出一个 DLL 模块）</h4><p>DLL 库的编写（导出一个 DLL 模块） DLL 头文件：</p>
+<h4 id="DLL-库的编写（导出一个-DLL-模块）">DLL 库的编写（导出一个 DLL 模块）</h4>
+<p>DLL 库的编写（导出一个 DLL 模块） DLL 头文件：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MyLib. H</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> MYLIBAPI</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// MYLIBAPI 应该在全部 DLL 源文件的 include &quot;Mylib. H&quot; 之前被定义</span></span><br><span class="line"><span class="comment">// 全部函数/变量正在被导出</span></span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个头文件被一个 exe 源代码模块包含，意味着全部函数/变量被导入</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MYLIBAPI extern <span class="string">&quot;C&quot;</span> __declspec (dllimport)</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里定义任何的数据结构和符号</span></span><br><span class="line"><span class="comment">// 定义导出的变量（避免导出变量）</span></span><br><span class="line">MYLIBAPI <span class="type">int</span> g_nResult;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义导出函数原型</span></span><br><span class="line"><span class="function">MYLIBAPI <span class="type">int</span> <span class="title">Add</span> <span class="params">(<span class="type">int</span> nLeft, <span class="type">int</span> nRight)</span></span>;</span><br></pre></td></tr></table></figure>
-
 <p>DLL 源文件：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MyLibFile1. Cpp</span></span><br><span class="line"><span class="comment">// 包含标准 Windows 和 C 运行时头文件</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// DLL 源码文件导出的函数和变量</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MYLIBAPI extern <span class="string">&quot;C&quot;</span> __declspec (dllexport)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 包含导出的数据结构、符号、函数、变量</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;MyLib. H&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 将此 DLL 源代码文件的代码放在此处</span></span><br><span class="line">Int g_nResult;</span><br><span class="line"><span class="function">Int <span class="title">Add</span> <span class="params">(<span class="type">int</span> nLeft, <span class="type">int</span> nRight)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    G_nResult = nLeft + nRight;</span><br><span class="line"></span><br><span class="line">    Return g_nResult;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="DLL-库的使用（运行时动态链接-DLL）"><a href="#DLL-库的使用（运行时动态链接-DLL）" class="headerlink" title="DLL 库的使用（运行时动态链接 DLL）"></a>DLL 库的使用（运行时动态链接 DLL）</h4><p>DLL 库的使用（运行时动态链接 DLL）：</p>
+<h4 id="DLL-库的使用（运行时动态链接-DLL）">DLL 库的使用（运行时动态链接 DLL）</h4>
+<p>DLL 库的使用（运行时动态链接 DLL）：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A simple program that uses LoadLibrary and</span></span><br><span class="line"><span class="comment">// GetProcAddress to access myPuts from Myputs. Dll.</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">Typedef <span class="title">int</span> <span class="params">(__cdecl *MYPROC)</span><span class="params">(LPWSTR)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function">Int <span class="title">main</span> <span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    HINSTANCE hinstLib;</span><br><span class="line">    MYPROC ProcAdd;</span><br><span class="line">    BOOL fFreeResult, fRunTimeLinkSuccess = FALSE;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Get a handle to the DLL module.</span></span><br><span class="line">    HinstLib = <span class="built_in">LoadLibrary</span> (<span class="built_in">TEXT</span> (<span class="string">&quot;MyPuts. Dll&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// If the handle is valid, try to get the function address.</span></span><br><span class="line">    <span class="built_in">If</span> (hinstLib != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        ProcAdd = (MYPROC) <span class="built_in">GetProcAddress</span> (hinstLib, <span class="string">&quot;myPuts&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// If the function address is valid, call the function.</span></span><br><span class="line">        <span class="built_in">If</span> (<span class="literal">NULL</span> != ProcAdd)</span><br><span class="line">        &#123;</span><br><span class="line">            FRunTimeLinkSuccess = TRUE;</span><br><span class="line">            (ProcAdd)(<span class="string">L&quot;Message sent to the DLL function\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Free the DLL module.</span></span><br><span class="line">        FFreeResult = <span class="built_in">FreeLibrary</span> (hinstLib);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// If unable to call the DLL function, use an alternative.</span></span><br><span class="line">    <span class="built_in">If</span> (! FRunTimeLinkSuccess)</span><br><span class="line">        <span class="built_in">Printf</span> (<span class="string">&quot;Message printed from executable\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    Return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行库（Runtime-Library）"><a href="#运行库（Runtime-Library）" class="headerlink" title="运行库（Runtime Library）"></a>运行库（Runtime Library）</h3><h4 id="典型程序运行步骤"><a href="#典型程序运行步骤" class="headerlink" title="典型程序运行步骤"></a>典型程序运行步骤</h4><ol>
+<h3 id="运行库（Runtime-Library）">运行库（Runtime Library）</h3>
+<h4 id="典型程序运行步骤">典型程序运行步骤</h4>
+<ol>
 <li>操作系统创建进程，把控制权交给程序的入口（往往是运行库中的某个入口函数）；</li>
-<li>入口函数对运行库和程序运行环境进行初始化（包括堆、I&#x2F;O、线程、全局变量构造等等）；</li>
+<li>入口函数对运行库和程序运行环境进行初始化（包括堆、I/O、线程、全局变量构造等等）；</li>
 <li>入口函数初始化后，调用 main 函数，正式开始执行程序主体部分；</li>
-<li>Main 函数执行完毕后，返回到入口函数进行清理工作（包括全局变量析构、堆销毁、关闭 I&#x2F;O 等），然后进行系统调用结束进程。</li>
+<li>Main 函数执行完毕后，返回到入口函数进行清理工作（包括全局变量析构、堆销毁、关闭 I/O 等），然后进行系统调用结束进程。</li>
 </ol>
 <blockquote>
-<p>一个程序的 I&#x2F;O 指代程序与外界的交互，包括文件、管程、网络、命令行、信号等。更广义地讲，I&#x2F;O 指代操作系统理解为 “文件” 的事物。</p>
+<p>一个程序的 I/O 指代程序与外界的交互，包括文件、管程、网络、命令行、信号等。更广义地讲，I/O 指代操作系统理解为 “文件” 的事物。</p>
 </blockquote>
-<h4 id="Glibc-入口"><a href="#Glibc-入口" class="headerlink" title="Glibc 入口"></a>Glibc 入口</h4><p><code>_start -&gt; __libc_start_main -&gt; exit -&gt; _exit</code></p>
+<h4 id="Glibc-入口">Glibc 入口</h4>
+<p><code>_start -&gt; __libc_start_main -&gt; exit -&gt; _exit</code></p>
 <p>其中 <code>main (argc, argv, __environ)</code> 函数在 <code>__libc_start_main</code> 里执行。</p>
-<h4 id="MSVC-CRT-入口"><a href="#MSVC-CRT-入口" class="headerlink" title="MSVC CRT 入口"></a>MSVC CRT 入口</h4><p><code>int mainCRTStartup (void)</code></p>
+<h4 id="MSVC-CRT-入口">MSVC CRT 入口</h4>
+<p><code>int mainCRTStartup (void)</code></p>
 <p>执行如下操作：</p>
 <ol>
 <li>初始化和 OS 版本有关的全局变量；</li>
 <li>初始化堆；</li>
-<li>初始化 I&#x2F;O；</li>
+<li>初始化 I/O；</li>
 <li>获取命令行参数和环境变量；</li>
 <li>初始化 C 库的一些数据；</li>
 <li>调用 main 并记录返回值；</li>
 <li>检查错误并将 main 的返回值返回。</li>
 </ol>
-<h4 id="C-语言运行库（CRT）"><a href="#C-语言运行库（CRT）" class="headerlink" title="C 语言运行库（CRT）"></a>C 语言运行库（CRT）</h4><p>大致包含如下功能：</p>
+<h4 id="C-语言运行库（CRT）">C 语言运行库（CRT）</h4>
+<p>大致包含如下功能：</p>
 <ul>
 <li>启动与退出：包括入口函数及入口函数所依赖的其他函数等；</li>
 <li>标准函数：有 C 语言标准规定的 C 语言标准库所拥有的函数实现；</li>
-<li>I&#x2F;O：I&#x2F;O 功能的封装和实现；</li>
+<li>I/O：I/O 功能的封装和实现；</li>
 <li>堆：堆的封装和实现；</li>
 <li>语言实现：语言中一些特殊功能的实现；</li>
 <li>调试：实现调试功能的代码。</li>
 </ul>
-<h4 id="C-语言标准库（ANSI-C）"><a href="#C-语言标准库（ANSI-C）" class="headerlink" title="C 语言标准库（ANSI C）"></a>C 语言标准库（ANSI C）</h4><p>包含：</p>
+<h4 id="C-语言标准库（ANSI-C）">C 语言标准库（ANSI C）</h4>
+<p>包含：</p>
 <ul>
 <li>标准输入输出（stdio. H）；</li>
 <li>文件操作（stdio. H）；</li>
@@ -423,7 +452,7 @@
 <li>数学函数（math. H）；</li>
 <li>资源管理（stdlib. H）；</li>
 <li>格式转换（stdlib. H）；</li>
-<li>时间&#x2F;日期（time. H）；</li>
+<li>时间/日期（time. H）；</li>
 <li>断言（assert. H）；</li>
 <li>各种类型上的常数（limits. H &amp; float. H）；</li>
 <li>变长参数（stdarg. H）；</li>
@@ -441,10 +470,12 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/&title=链接装载库 - huigang39's blog&summary=链接装载库一、内存、栈、堆一般应用程序内存空间有如下区域：
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/&title=链接装载库 - huigang39's blog&summary=链接装载库
+一、内存、栈、堆
+一般应用程序内存空间有如下区域：
 
 栈：由操作系统自动分配释放，存放函数的参数值、局部变量等的值，用于维护函数调用的上下文；
-堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容纳应..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=链接装载库 - huigang39's blog&amp;body=https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统回收，用来容..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=链接装载库 - huigang39's blog&amp;body=https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://huigang39.github.io/2023/05/20/%E6%8A%80%E6%9C%AF/%E9%93%BE%E6%8E%A5%E8%A3%85%E8%BD%BD%E5%BA%93/"/>
@@ -461,7 +492,8 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>

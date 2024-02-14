@@ -19,12 +19,12 @@
   <title>基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 - huigang39's blog</title>
 
   
-    <meta name="description" content="基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图理论基础电机原理了解无刷直流电机（BLDC）的工作原理、结构和性能参数。  底层原理极其简单，却很难造出精品！无刷直流电机的工作原理_哔哩哔哩_bilibili  FOC（磁场定向控制）原理学习 FOC 的基本概念、控制策略和实现方法。  【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)  控制理论">
+    <meta name="description" content="基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 理论基础 电机原理 了解无刷直流电机（BLDC）的工作原理、结构和性能参数。  底层原理极其简单，却很难造出精品！无刷直流电机的工作原理_哔哩哔哩_bilibili  FOC（磁场定向控制）原理 学习 FOC 的基本概念、控制策略和实现方法。  【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图">
 <meta property="og:url" content="https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/index.html">
 <meta property="og:site_name" content="huigang39&#39;s blog">
-<meta property="og:description" content="基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图理论基础电机原理了解无刷直流电机（BLDC）的工作原理、结构和性能参数。  底层原理极其简单，却很难造出精品！无刷直流电机的工作原理_哔哩哔哩_bilibili  FOC（磁场定向控制）原理学习 FOC 的基本概念、控制策略和实现方法。  【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)  控制理论">
+<meta property="og:description" content="基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 理论基础 电机原理 了解无刷直流电机（BLDC）的工作原理、结构和性能参数。  底层原理极其简单，却很难造出精品！无刷直流电机的工作原理_哔哩哔哩_bilibili  FOC（磁场定向控制）原理 学习 FOC 的基本概念、控制策略和实现方法。  【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/huigang39/picbed/main/202306191647711.png">
 <meta property="article:published_time" content="2023-06-14T15:20:00.000Z">
@@ -73,7 +73,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2023/07/04/%E9%A1%B9%E7%9B%AE/%E6%96%AD%E6%8C%87-%E7%94%B5%E5%AD%90%E7%9A%AE%E8%82%A4%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">断指-电子皮肤开发文档</span></a><a class="item title" href="/2023/08/01/%E6%8A%80%E6%9C%AF/PlantUML%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><span class="title">PlantUML 入门指南</span></a><a class="item title" href="/2023/02/03/%E7%90%86%E8%AE%BA/%E6%AC%A7%E6%8B%89%E8%A7%92%E4%B8%8E%E5%9B%9B%E5%85%83%E6%95%B0/"><span class="title">欧拉角与四元数</span></a><a class="item title" href="/2023/09/25/%E6%8A%80%E6%9C%AF/Linux/Linux%20C%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"><span class="title">Linux C 多线程编程</span></a><a class="item title" href="/2023/04/28/%E6%8A%80%E6%9C%AF/%E5%B5%8C%E5%85%A5%E5%BC%8F/AnyCloud37E%20%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"><span class="title">AnyCloud37E 开发指南</span></a><a class="item title" href="/2023/07/29/%E7%90%86%E8%AE%BA/FOC/%E5%BA%8F/"><span class="title">FOC - 序</span></a><a class="item title" href="/2023/10/19/%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><span class="title">排序算法</span></a><a class="item title" href="/2023/09/10/%E6%8A%80%E6%9C%AF/Linux/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"><span class="title">Linux 文件系统（一） - 基本概念</span></a><a class="item title" href="/2024/01/14/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><span class="title">关于博客的一点感想</span></a><a class="item title" href="/2023/12/24/%E7%94%9F%E6%B4%BB/%E7%A7%9F%E6%88%BF%E5%B0%8F%E8%AE%B0/"><span class="title">租房小记</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -98,29 +98,46 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="基于-FOC-驱动谐波减速器的仿-UR-机械臂开发路线图"><a href="#基于-FOC-驱动谐波减速器的仿-UR-机械臂开发路线图" class="headerlink" title="基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图"></a>基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图</h2><h3 id="理论基础"><a href="#理论基础" class="headerlink" title="理论基础"></a>理论基础</h3><h4 id="电机原理"><a href="#电机原理" class="headerlink" title="电机原理"></a>电机原理</h4><p>了解无刷直流电机（BLDC）的工作原理、结构和性能参数。</p>
+  </div><article class="md-text content"><h2 id="基于-FOC-驱动谐波减速器的仿-UR-机械臂开发路线图">基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图</h2>
+<h3 id="理论基础">理论基础</h3>
+<h4 id="电机原理">电机原理</h4>
+<p>了解无刷直流电机（BLDC）的工作原理、结构和性能参数。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dc41137Gx/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click">底层原理极其简单，却很难造出精品！无刷直流电机的工作原理_哔哩哔哩_bilibili</a></li>
 </ol>
-<h4 id="FOC（磁场定向控制）原理"><a href="#FOC（磁场定向控制）原理" class="headerlink" title="FOC（磁场定向控制）原理"></a>FOC（磁场定向控制）原理</h4><p>学习 FOC 的基本概念、控制策略和实现方法。</p>
+<h4 id="FOC（磁场定向控制）原理">FOC（磁场定向控制）原理</h4>
+<p>学习 FOC 的基本概念、控制策略和实现方法。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/147659820">【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)</a></li>
 </ol>
-<h4 id="控制理论"><a href="#控制理论" class="headerlink" title="控制理论"></a>控制理论</h4><p>了解控制算法的基本原理，如 PI、PID 控制等。</p>
+<h4 id="控制理论">控制理论</h4>
+<p>了解控制算法的基本原理，如 PI、PID 控制等。</p>
 <p>在 FOC 控制中主要用到三个 PID 环，从内环到外环依次是：<strong>电流环</strong>、<strong>速度环</strong>、<strong>位置环。</strong></p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/huigang39/picbed/main/202306191647711.png" alt="image.png"></p>
-<h3 id="FOC-控制算法"><a href="#FOC-控制算法" class="headerlink" title="FOC 控制算法"></a>FOC 控制算法</h3><h4 id="STM32-HAL-库编程"><a href="#STM32-HAL-库编程" class="headerlink" title="STM32 HAL 库编程"></a>STM32 HAL 库编程</h4><p>学习如何使用 STM32 进行编程，实现 FOC 控制算法。</p>
-<h4 id="数字信号处理"><a href="#数字信号处理" class="headerlink" title="数字信号处理"></a>数字信号处理</h4><p>了解数字信号处理的基本概念和方法，如傅里叶变换、滤波器设计等。</p>
-<h4 id="传感器技术"><a href="#传感器技术" class="headerlink" title="传感器技术"></a>传感器技术</h4><p>学习如何使用电流、电压和位置传感器（如霍尔传感器、编码器等）进行测量和控制。</p>
-<h3 id="FOC-驱动器"><a href="#FOC-驱动器" class="headerlink" title="FOC 驱动器"></a>FOC 驱动器</h3><h4 id="基础电子元器件"><a href="#基础电子元器件" class="headerlink" title="基础电子元器件"></a>基础电子元器件</h4><p>了解电子元件（如电阻、电容、电感、二极管、晶体管等）的性能和使用方法。</p>
+<h3 id="FOC-控制算法">FOC 控制算法</h3>
+<h4 id="STM32-HAL-库编程">STM32 HAL 库编程</h4>
+<p>学习如何使用 STM32 进行编程，实现 FOC 控制算法。</p>
+<h4 id="数字信号处理">数字信号处理</h4>
+<p>了解数字信号处理的基本概念和方法，如傅里叶变换、滤波器设计等。</p>
+<h4 id="传感器技术">传感器技术</h4>
+<p>学习如何使用电流、电压和位置传感器（如霍尔传感器、编码器等）进行测量和控制。</p>
+<h3 id="FOC-驱动器">FOC 驱动器</h3>
+<h4 id="基础电子元器件">基础电子元器件</h4>
+<p>了解电子元件（如电阻、电容、电感、二极管、晶体管等）的性能和使用方法。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/147156805">常用元器件基础知识详解 - 知乎 (zhihu.com)</a></li>
 </ol>
-<h4 id="电路设计"><a href="#电路设计" class="headerlink" title="电路设计"></a>电路设计</h4><p>学习如何设计电路，包括电源管理、信号处理、驱动电路等。</p>
-<h4 id="PCB-设计"><a href="#PCB-设计" class="headerlink" title="PCB 设计"></a>PCB 设计</h4><p>学习如何使用 PCB 设计软件（如立创 EDA、Altium Designer、KiCad 等）设计和制作电路板。</p>
-<h3 id="ROS"><a href="#ROS" class="headerlink" title="ROS"></a>ROS</h3><h4 id="正逆运动学"><a href="#正逆运动学" class="headerlink" title="正逆运动学"></a>正逆运动学</h4><p>学习如何使用正逆运动学计算机械臂的位姿。</p>
-<h4 id="路径规划"><a href="#路径规划" class="headerlink" title="路径规划"></a>路径规划</h4><p>使用 ROS 的 MoveIt! 等工具学习机械臂的路径规划，实现机械臂的定位抓取效果。</p>
-<h3 id="路线图"><a href="#路线图" class="headerlink" title="路线图"></a>路线图</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11V41127pq/?spm_id_from=333.999.0.0&vd_source=d340f867406b71f880c4bbfd2b734924">【自制】机器人的心脏–超迷你FOC矢量控制驱动器【软核】_哔哩哔哩_bilibili</a></p>
+<h4 id="电路设计">电路设计</h4>
+<p>学习如何设计电路，包括电源管理、信号处理、驱动电路等。</p>
+<h4 id="PCB-设计">PCB 设计</h4>
+<p>学习如何使用 PCB 设计软件（如立创 EDA、Altium Designer、KiCad 等）设计和制作电路板。</p>
+<h3 id="ROS">ROS</h3>
+<h4 id="正逆运动学">正逆运动学</h4>
+<p>学习如何使用正逆运动学计算机械臂的位姿。</p>
+<h4 id="路径规划">路径规划</h4>
+<p>使用 ROS 的 MoveIt! 等工具学习机械臂的路径规划，实现机械臂的定位抓取效果。</p>
+<h3 id="路线图">路线图</h3>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11V41127pq/?spm_id_from=333.999.0.0&amp;vd_source=d340f867406b71f880c4bbfd2b734924">【自制】机器人的心脏–超迷你FOC矢量控制驱动器【软核】_哔哩哔哩_bilibili</a></p>
 <ol>
 <li>使用 STM32 HAL 库实现 FOC 闭环控制；</li>
 <li>将谐波减速器和电机安装配合在一起进行闭环控制；</li>
@@ -142,11 +159,14 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/&title=基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 - huigang39's blog&summary=基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图理论基础电机原理了解无刷直流电机（BLDC）的工作原理、结构和性能参数。
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/&title=基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 - huigang39's blog&summary=基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图
+理论基础
+电机原理
+了解无刷直流电机（BLDC）的工作原理、结构和性能参数。
 
 底层原理极其简单，却很难造出精品！无刷直流电机的工作原理_哔哩哔哩_bilibili
 
-FOC（磁场定..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 - huigang39's blog&amp;body=https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+FOC（..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=基于 FOC 驱动谐波减速器的仿 UR 机械臂开发路线图 - huigang39's blog&amp;body=https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://huigang39.github.io/2023/06/14/%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8E%20FOC%20%E9%A9%B1%E5%8A%A8%E8%B0%90%E6%B3%A2%E5%87%8F%E9%80%9F%E5%99%A8%E7%9A%84%E4%BB%BF%20UR%20%E6%9C%BA%E6%A2%B0%E8%87%82%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/"/>
@@ -163,7 +183,8 @@ FOC（磁场定..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAA
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Huigang Wang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
